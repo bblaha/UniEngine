@@ -1,0 +1,39 @@
+<?php
+
+$_Lang['DarkEnergyStatusIs']    = 'Dunkle Energie auf deinem Account;
+$_Lang['BuyMoreDE']             = 'Kaufe mehr Dunkle Energie!!';
+
+$_Lang['aboutpro']              = 'Pro Account';
+
+$_Lang['Desc']                  = 'Ein Pro Account erweitert die Möglichkeiten deines Accounts. Du erhältst Zugriff auf einzigartige Features, die dich deine Planeten und Flotten effizienter managen lassen. Damit kannst du dein Imperium noch schneller expandieren!';
+
+$_Lang['BenefitsTitle']         = 'Pro Account Vorteile';
+
+$_Lang['Benefits']              = [
+    'Konstruktions Warteschlange - erweitert auf <b class="lime">10 Slots</b>',
+    'Forschungs Warteschlange - <b class="lime">5 Slots</b>',
+    '<b class="lime">Unlimitierter</b> Zugriff auf den <b class="lime">Resourcen Händlert</b>',
+    'Zugriff auf die <b class="lime">Imperiumsübersicht</b> (Übersicht über all deine Planeten, Flotten, Gebäude und Resourcen))',
+    'Zugriff auf den <b class="lime">Disassembler</b> (Zerstöre deine Schiffe und Verteidigungsanlagen und erhalte einen Teil der Resourcen zurück)',
+    'Schiffswerft Warteschlangenlimit erhöht auf <b class="lime">10 Millionen</b>',
+    'Zugriff auf die <b class="lime">Angriffshistorie</b> (Zur Bashing Regel zählend)',
+    'Resourcentransport Hilfefunktionen (<b class="lime">Auto-fill</b>)',
+];
+
+$_Lang['ProAccStatus']          = 'Pro Account Status';
+$_Lang['ProTill']               = 'Gültig bis';
+$_Lang['ProEnded']              = 'Abgelaufen';
+$_Lang['NeverHadPro']           = 'Nie erworben';
+
+$_Lang['RenewPro']              = 'Erweitern um %s %s!';
+$_Lang['BuyAgain']              = 'Nochmal kaufen um %s %s!';
+$_Lang['FirstBuy']              = 'Kaufen um %s %s!';
+
+$_Lang['_day']                  = 'Tag';
+$_Lang['_days']                 = 'Tage';
+
+$_Lang['Cost']                  = 'Kosten';
+$_Lang['CostUnits']             = 'Dunkle Energie';
+$_Lang['AreYouSure']            = 'Bist du sicher?';
+
+?>
