@@ -1,0 +1,20 @@
+<?php
+
+$_Lang['No_Data']           = 'Keine Daten';
+$_Lang['No_id_given']       = 'Eintrag mit der angegebenen ID existiert nicht!';
+
+$_Lang['InfiniteVacation']  = 'Unbegrenzter Urlaub';
+$_Lang['Ban_Expired']       = 'Ban abgelaufen';
+$_Lang['Ban_TimeLeft']      = 'Verbleibend';
+$_Lang['Ban_expired']       = 'Ban abgelaufen!';
+
+$_Lang['_ago']              = 'her';
+$_Lang['_day']              = 'Tag';
+$_Lang['_days']             = 'Tage';
+$_Lang['_today']            = 'Heute';
+$_Lang['_yesterday']        = 'Gestern';
+$_Lang['_Since']            = 'Seit';
+$_Lang['_Untill']           = 'Bis';
+$_Lang['_Duration']         = 'Dauer';
+
+?>
