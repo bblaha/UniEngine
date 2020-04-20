@@ -1,0 +1,931 @@
+<? php
+
+$ _Lang ['PageTitle']                  = 'Aufgaben und Erfolge';
+
+$ _Lang ['Tabs_ActiveTasks']           = 'Aktive Aufgaben';
+$ _Lang ['Tabs_TasksLog']              = 'Aufgabenprotokoll';
+$ _Lang ['Tabs_Achievements']          = 'Achievements';
+
+$ _Lang ['Tab01_CatSel_TabTitle']      = 'Aufgaben&uuml;bersicht';
+$ _Lang ['Tab01_CatSel_CatRewards']    = 'Belohnungen f&uuml;r den Abschlu&szlig; der Aufgabenkategorie';
+$ _Lang ['Tab01_CatSel_Task']          = 'Task';
+$ _Lang ['Tab01_CatSel_TaskDone']      = 'Abgeschlo&szlig;en';
+$ _Lang ['Tab01_CatSel_TaskNotDone']   = 'Unvollst&auml;ndig';
+$ _Lang ['Tab01_CatSel_TaskLocked']    = 'Gesperrt';
+$ _Lang ['Tab01_CatSel_JobsToDo']      = 'Anforderungen';
+$ _Lang ['Tab01_CatSel_FirstToDo']     = 'Um diese Aufgabe freizuschalten, schlie&szlig;en Sie ab';
+$ _Lang ['Tab01_CatSel_DoCategory']    = 'Die gesamte Kategorie';
+$ _Lang ['Tab01_CatSel_DoTask']        = 'Task';
+$ _Lang ['Tab01_CatSel_Reward']        = 'Belohnungen';
+$ _Lang ['Tab01_CatSel_SkipInfo']      = '<b cla&szlig; = \'% s \ '>% s </ b>';
+$ _Lang ['Tab01_CatSel_SkipBoth']      = 'Sie erhalten Belohnungen f&uuml;r das Erledigen von Aufgaben und der gesamten Kategorie';
+$ _Lang ['Tab01_CatSel_SkipTaskOnly']  = 'Sie erhalten Belohnungen nur f&uuml;r das Erf&uuml;llen von Aufgaben <br/> - Es gibt keine Belohnungen f&uuml;r das Abschlie&szlig;en von Kategorien';
+$ _Lang ['Tab01_CatSel_SkipCatOnly']   = 'Sie erhalten Belohnungen f&uuml;r das Abschlie&szlig;en der gesamten Kategorie <br/> - Es gibt keine Belohnungen f&uuml;r das Abschlie&szlig;en einzelner Aufgaben';
+$ _Lang ['Tab01_CatSel_SkipNone']      = 'Dadurch werden weitere Aufgaben freigeschaltet, aber Sie erhalten keine Belohnungen';
+$ _Lang ['Tab01_CatSel_DoSkip']        = 'Diese Kategorie &uuml;berspringen';
+$ _Lang ['Tab01_CatSel_SkipConfirm']   = 'M&ouml;chten Sie diese Kategorie von Aufgaben wirklich &uuml;berspringen?';
+
+$ _Lang ['Tab01_CatList_TabTitle']     = 'Liste der auszuf&uuml;hrenden Aufgabenkategorien';
+$ _Lang ['Tab01_CatList_Info']         = 'Die folgende Liste enth&auml;lt alle Aufgaben (in Kategorien gruppiert), die Sie derzeit ausf&uuml;hren k&ouml;nnen. <br/> Klicken Sie auf eine der Kategorien, um deren &uuml;bersicht anzuzeigen und den Status der Aufgaben zu &uuml;berpr&uuml;fen. <Br /> Wenn Sie die Liste der bereits erledigten Aufgaben anzeigen m&ouml;chten, wechseln Sie zur Registerkarte "Aufgabenprotokoll". <br/> <b cla&szlig; = "lime"> Hinweis: Alle Aufgaben \ 'Belohnungen werden auf Ihren Mutterplaneten &uuml;bertragen </ b> ';
+$ _Lang ['Tab01_CatList_Done']         = 'Abgeschlo&szlig;en';
+$ _Lang ['Tab01_CatList_NoCats']       = 'Keine aktiven Aufgaben!';
+$ _Lang ['Tab01_CatList_AllCatsMade']  = 'Sie haben alle verf&uuml;gbaren Aufgaben erledigt!';
+$ _Lang ['Tab01_CatList_NoCatsMade']   = 'Sie haben noch keine Aufgaben \' Kategorien abgeschlo&szlig;en! ';
+
+$ _Lang ['Tab01_CatListDone_TabTitle'] = 'Liste der erledigten Aufgaben \' Kategorien ';
+$ _Lang ['Tab01_CatListDone_Info']     = 'Die folgende Liste enth&auml;lt alle bereits abgeschlo&szlig;enen Aufgaben. <br/> Klicken Sie auf eine der Kategorien, um die &uuml;bersicht anzuzeigen und die Aufgabenbeschreibungen und erhaltenen Belohnungen zu &uuml;berpr&uuml;fen.';
+
+$ _Lang ['Msg_CatNoExist']             = 'Diese Kategorie existiert nicht!';
+$ _Lang ['Msg_CatDone']                = 'Abgeschlo&szlig;ene Aufgaben sind im Aufgabenprotokoll verf&uuml;gbar!';
+$ _Lang ['Msg_CatNotDone']             = 'Sie haben diese Kategorie noch nicht abgeschlo&szlig;en!';
+$ _Lang ['Msg_CatNotAvailable']        = 'Sie haben diese Kategorie noch nicht freigeschaltet!';
+$ _Lang ['Msg_CantSkipUnSkippable']    = 'Sie k&ouml;nnen diese Kategorie nicht &uuml;berspringen!';
+$ _Lang ['Msg_CantSkipDone']           = 'Diese Aufgabenkategorie \' ist bereits abgeschlo&szlig;en! ';
+$ _Lang ['Msg_Skiped']                 = 'Die Kategorie <i> "% s" </ i> wurde &uuml;bersprungen!';
+
+$ _Lang ['Tab_Prev']                   = 'Vorherige Aufgabe';
+$ _Lang ['Tab_Next']                   = 'N&auml;chste Aufgabe';
+
+
+$ _Lang ['TasksCats'] = [
+    1 => 'Einf&uuml;hrung',
+    2 => 'Milit&auml;r',
+    3 => 'Wirtschaft',
+    4 => 'Forschung',
+    5 => 'Unterst&uuml;tzung der Alliierten',
+    6 => 'Universumsunterst&uuml;tzung',
+];
+
+$ _Lang ['TaskRewardsTranslations'] = [
+    'PREMIUM_ITEM' => [
+        12 => 'Gratis Geologe f&uuml;r 3 Tage'
+    ]]
+];
+
+$_Lang['TaskRewards'] = [
+    //  $details
+    //      - type: 'RESOURCES'
+    //      - met: Number | undefined
+    //      - cry: Number | undefined
+    //      - deu: Number | undefined
+    'RESOURCES' => function ($details, $_Lang) {
+        $parts = [];
+
+        $resourceNames = [
+            'met' => $_Lang['Metal'],
+            'cry' => $_Lang['Crystal'],
+            'deu' => $_Lang['Deuterium'],
+        ];
+
+        foreach ([ 'met', 'cry', 'deu' ] as $resourceKey) {
+            if (!i&szlig;et($details[$resourceKey])) {
+                continue;
+            }
+
+            $value = prettyNumber($details[$resourceKey]);
+            $resourceName = $resourceNames[$resourceKey];
+
+            $parts[] = "{$resourceName}: {$value} units";
+        }
+
+        return implode(", ", $parts);
+    },
+
+    //  $details
+    //      - type: 'PREMIUM_ITEM'
+    //      - elementID: Number
+    'PREMIUM_ITEM' => function ($details, $_Lang) {
+        $elementID = $details['elementID'];
+
+        return $_Lang['TaskRewardsTranslations']['PREMIUM_ITEM'][$elementID];
+    },
+
+    //  $details
+    //      - type: 'XXXX'
+    //      - elementID: Number
+    //      - count: Number
+    'PLANET_ELEMENT' => function ($details, $_Lang) {
+        $elementID = $details['elementID'];
+        $value = prettyNumber($details['count']);
+        $resourceName = $_Lang['tech'][$elementID];
+
+        return "{$resourceName}: {$value}";
+    },
+
+    //  $details
+    //      - type: 'PREMIUM_RESOURCE'
+    //      - value: Number
+    'PREMIUM_RESOURCE' => function ($details, $_Lang) {
+        $value = prettyNumber($details['value']);
+        $resourceName = $_Lang['DarkEnergy'];
+
+        return "{$resourceName}: {$value} units";
+    },
+];
+
+$ _Lang ['Tasks'] = [
+    // Einf&uuml;hrung
+    1 => [
+        'name' => 'Grundversorgung',
+        'desc' => 'Die grundlegende planetarische Infrastruktur bietet Re&szlig;ourcen, die f&uuml;r die weitere Expansion erforderlich sind. <b> Metall </ b> und <b> Kristall </b> sind die im Spiel verf&uuml;gbaren grundlegenden Re&szlig;ourcen, die zum Aufbau verwendet werden k&ouml;nnen. Um diese Re&szlig;ourcen zu extrahieren, ben&ouml;tigst du auch <b> Energie </b>, die von Kraftwerken und ihren kleineren, mobileren Gegenst&uuml;cken erzeugt wird.'
+    ],
+    2 => [
+        'name' => 'Die dritte Re&szlig;ource',
+        'desc' => '<b> Deuterium </b> ist eine sehr wichtige Re&szlig;ource, die im Spiel verf&uuml;gbar ist. Du kannst damit deine Planeteninfrastruktur weiter verbe&szlig;ern, Technologien verbe&szlig;ern, neue Schiffe und einige Verteidigung&szlig;ysteme bauen. Um das stabile Wachstum deines Imperiums zu erm&ouml;glichen, mu&szlig;t du sich um die stabile Versorgung mit dieser Re&szlig;ource k&uuml;mmern. <b> Deuterium </b> kann dank seines gespeicherten Energiewertes auch als <b> Treibstoff </b> f&uuml;r Raumschiffe verwendet werden.'
+    ],
+    3 => [
+        'name' => 'Minimal lebensf&auml;hige Verteidigung',
+        'desc' => 'Einer der Hauptaspekte des Spiels sind K&auml;mpfe mit anderen Spielern. Um zu verhindern, da&szlig; du f&uuml;r deine Feinde ein leichtes Ziel bist, solltest du einige Re&szlig;ourcen in eine minimale planetare Verteidigung investieren. Um sowohl Schiffe als auch Verteidigung&szlig;ysteme zu bauen, ben&ouml;tigst du eine <b> Roboterfabrik </ b> und eine <b> Schiffswerft </ b>. In einer sp&auml;teren Phase des Spiels mu&szlig;t du auch deine Technologien weiterentwickeln.'
+    ],
+    4 => [
+        'name' => 'Weitere planetare Verbe&szlig;erungen',
+        'desc' => 'Jeder Planet hat einen begrenzten Re&szlig;ourcenspeicher. Wenn dieses Limit erreicht ist, wird die <b> Re&szlig;ourcenextraktion </b> vor&uuml;bergehend angehalten. Durch die Verbe&szlig;erung deiner <b> Speicher </b> und <b> Tanks </b> werden diese Situationen verhindert. Re&szlig;ourcen, die von deinen Schiffen transportiert werden werden auf deinen Planeten gespeichert, obwohl es keinen Speicherplatz f&uuml;r die Extraktion selbst gibt!'
+    ],
+    5 => [
+        'name' => 'Technologische Fortschritte',
+        'desc' => 'Das <b> Forschungslabor </ b> ist eine Struktur, mit der du deine Technologien entwickeln und weiterentwickeln kannst, um neue, be&szlig;ere Schiffe zu bauen. Eine der wichtigsten Technologien ist <b> Computertechnologie </b> (mit der du mehrere Flotten gleichzeitig kontrollieren kannst) und <b> Antriebstechnologien </b>. Informationen zu <b> technologischen Anforderungen </b> findest du im Abschnitt <b> "<a href="techtree.php" cla&szlig;="orange"> Technologie </a>" </ b> im Spielmen&uuml;.'
+    ],
+    6 => [
+        'name' => 'Deine ersten Schiffe',
+        'desc' => 'Mit deinen ersten Schiffen kannst du Re&szlig;ourcen zwischen deinen Planeten transportieren und deine Feinde angreifen, indem du deren Planeten pl&uuml;nderst. Schiffe wie <b> Frachtschiffe </b> sind nicht f&uuml;r Schlachten geeignet, daher unterst&uuml;tzt du sie be&szlig;er mit anderen milit&auml;rischen Einheiten (z. B. <b> leichte J&auml;ger </b>, die sich um das feindliche Feuer k&uuml;mmern, oder <b> Schlachtschiffe </b>, die feindliche Einheiten schwer besch&auml;digen k&ouml;nnen)'
+    ],
+    7 => [
+        'name' => 'Planetenkolonien',
+        'desc' => 'Die Entwicklung deiner planetarischen <b> Kolonien </b> ist entscheidend f&uuml;r die Expansion deines Reiches. Je mehr Planeten du besitzt, desto mehr Re&szlig;ourcen kannst du mit weniger Investitionen in die Verbe&szlig;erung der Minen abbauen. Da die Kosten f&uuml;r Verbe&szlig;erungen schneller steigen als die f&uuml;r die verbe&szlig;erte Gewinnung, ist es viel einfacher und effizienter, zwei Minen auf niedriger Ebene zu verbe&szlig;ern, als eine auf hoher Ebene. Bedenke auch, da&szlig; Deuterium auf k&auml;lteren Planeten, die weiter von ihren Systemsternen entfernt sind, leichter zu extrahieren ist und die gr&ouml;&szlig;ten Planeten an der 14. Position im Sonnensystem zu finden sind.'
+    ],
+    8 => [
+        'name' => 'Alternative Energiequellen',
+        'desc' => 'Aufgrund der steigenden Kosten f&uuml;r Verbe&szlig;erungen von Solaranlagen sind <b> Solarsatelliten </b> in den sp&auml;teren Phasen des Spiels eine sehr empfehlenswerte Energiequelle. Sie sind extrem billig und einfach zu konstruieren, was dir einen erheblichen Anstieg des Energieeinkommens erm&ouml;glicht. Sie haben jedoch einen erheblichen Nachteil im Vergleich zu kla&szlig;ischen Kraftwerken: Sie k&ouml;nnen w&auml;hrend Schlachten zerst&ouml;rt und ihre Tr&uuml;mmer von deinen Feinden gepl&uuml;ndert werden. Daher ist es wichtig, mindestens ein minimales Energieeinkommen aus den Kraftwerken bereitzustellen, um zu verhindern, da&szlig; deine Minen ihre Arbeit vollst&auml;ndig einstellen.'
+    ],
+    9 => [
+        'name' => 'Milit&auml;rische Aktionen',
+        'desc' => 'Der allererste Schritt zur Pl&uuml;nderung von Re&szlig;ourcen ist das Senden von <b> Spionagesonden </b>, um feindliche Vorr&auml;te zu finden. Mit hochentwickelter Spionagetechnologie oder einer ausreichend hohen Anzahl von Sonden solltest du in der Lage sein, gen&uuml;gend Informationen &uuml;ber die Planeten und Monde deiner Feinde, ihrer Abwehrkr&auml;fte und Speicherzust&auml;nde zu erhalten (denke jedoch daran, da&szlig; deine Sonden zerst&ouml;rt werden k&ouml;nnen, wenn sie entdeckt werden !). Vor der eigentlichen Angriffsmi&szlig;ion lohnt es sich, den <b> Kampfsimulator </b> zu verwenden, um zu &uuml;berpr&uuml;fen, ob die Mi&szlig;ion kosteng&uuml;nstig ist. Wenn ein Planet keine Verteidigung hat und keine Schiffe bewacht, kannst du <b> Re&szlig;ourcen </b> mit <b> Frachtschiffen </b> allein pl&uuml;ndern!'
+    ],
+    10 => [
+        'name' => 'Tr&uuml;mmerfeldbereinigung',
+        'desc' => 'Fast jede Schlacht produziert M&uuml;ll auf der Umlaufbahn und erzeugt ein <b> Tr&uuml;mmerfeld </b>, das die &uuml;berreste zerst&ouml;rter Schiffe und Verteidigungsanlagen enth&auml;lt. Dies bietet eine zus&auml;tzliche Einnahmequelle, weshalb es sich manchmal lohnt, einen Planeten ohne gespeicherte Re&szlig;ourcen anzugreifen, um einfach Re&szlig;ourcen einer zerst&ouml;rten feindlichen Flotte zu sammeln. Du kannst <b> Recycler </ b> verwenden, um diese Tr&uuml;mmer zu sammeln, aber denke daran - wer zuerst kommt, mahlt zuerst!'
+    ],
+    11 => [
+        'name' => 'Allianzen',
+        'desc' => '<b> Allianzen </b> sind Zusammenschl&uuml;&szlig;e mehrerer Spieler, die erkl&auml;ren, sich gegenseitig zu helfen, sowohl in Bezug auf milit&auml;rische Aktionen als auch in Bezug auf den Handel. Der Beitritt oder die Gr&uuml;ndung einer Allianz hilft deinem Imperium normalerweise, schneller zu wachsen und deine milit&auml;rische Herrschaft weiter auszubauen. Eine andere M&ouml;glichkeit, im Spiel "Kontakte zu kn&uuml;pfen", ist die Verwendung der <b> Freundesliste </b> - einer Liste befreundeter Spieler, mit der du genau wie bei einer Allianz-Mitgliedschaft <b> gemeinsame Angriffsflotten </b> senden kannst.'
+    ],
+    12 => [
+        'name' => 'Flottenrettung',
+        'desc' => 'Aufgrund der Art des Spiels sind deine Planeten und Flotten rund um die Uhr anf&auml;llig f&uuml;r feindliche Angriffe, auch wenn du nicht online bist. Daher ist es wichtig, da&szlig; jeder Flottenbesitzer seine Schiffe vor dem Abmelden auf einen sogenannten <b> FleetSave (FS) </b> schickt. Das ist eine lange und langsame Mi&szlig;ion, die es unm&ouml;glich macht, deine Schiffe w&auml;hrend des Fluges zu zerst&ouml;ren. Um deine Schiffe stark zu verlangsamen, kannst du ein spezielles Raumschiff verwenden - das <b> Space Shuttle </ b>. Der beste Weg, um eine Flottenrettung durchzuf&uuml;hren, besteht darin, deine Schiffe mit <b> Halten Mi&szlig;ion </ b> von einem deiner <b> Monde </ b> zu einem anderen zu schicken. Dies verhindert, da&szlig; Feinde deine Flotten w&auml;hrend des Fluges mit der <b> Sensor-Phalanx </ b> aufsp&uuml;ren, die Flottenbewegungen auf Monden nicht scannen kann.'
+    ],
+    13 => [
+        'name' => 'Berechnungen',
+        'desc' => 'Wenn dein Imperium w&auml;chst, dauert die Verbe&szlig;erung von Geb&auml;uden und der Bau neuer Arten von Raumschiffen aufgrund der wachsenden Komplexit&auml;t der entwickelten Strukturen l&auml;nger. Eine L&ouml;sung f&uuml;r dieses Problem ist der Bau und die Verbe&szlig;erung der Naniten-Fabrik, die die Bauzeit der Geb&auml;ude erheblich verk&uuml;rzt und auch bei der Arbeit der Werft hilft. Jede n&auml;chste Stufe der Naniten-Fabrik halbiert die Bauzeiten.'
+    ],
+    14 => [
+        'name' => 'Die Jagd nach der feindlichen Flotte',
+        'desc' => 'Die Sensor-Phalanx ist ein &auml;u&szlig;erst hilfreiches Werkzeug, um die Galaxie nach feindlichen Flotten abzusuchen. Sie wird jedoch unbrauchbar, wenn Schiffe zwischen Monden fliegen. In diesem Fall besteht die einzige L&ouml;sung darin, den Mond des Feindes mit Tode&szlig;ternen zu zerst&ouml;ren - gro&szlig;e und teure Einheiten, die mit Graviton-Kanonen ausgestattet sind und m&auml;chtig genug sind, um Monde zu zerst&ouml;ren. Nach der Zerst&ouml;rung des Mondes sind alle Schiffe w&auml;hrend des Fluges wieder f&uuml;r die Phalanx sichtbar, wenn der entsprechende Planet des Mondes gescannt wird.'
+    ],
+    15 => [
+        'name' => 'Interplanetarer Transport',
+        'desc' => 'Mega Cargoships sind das Ergebnis technischer Meisterschaft in der Welt des interplanetaren Transportsystems. Alle entwickelten Reiche nutzen sie als Haupttransporteinheit f&uuml;r Re&szlig;ourcen.'
+    ],
+    16 => [
+        'name' => 'Kolonialerweiterung',
+        'desc' => 'Die Expansion des Imperiums weiter in den Weltraum ist aus wirtschaftlicher Sicht &auml;u&szlig;erst wichtig. Jede weitere Kolonie ist eine zus&auml;tzliche Einnahmequelle. Je schneller du so viele Planeten wie m&ouml;glich kolonisierat, desto schneller wirst du deine Rivalen &uuml;bertreffen oder die Elite des Servers einholen.'
+    ],
+    17 => [
+        'name' => 'Kolonialreiche',
+        'desc' => 'W&auml;hrend der Kolonisierung neuer Planeten sollte man nicht verge&szlig;en, die koloniale Infrastruktur zu verbe&szlig;ern. Es lohnt sich, in die n&auml;chsten Ebenen von Minen und Extraktoren zu investieren, um das Re&szlig;ourceneinkommen des gesamten Imperiums zu erh&ouml;hen. Gleichm&auml;&szlig;ig verteilte Anlagen sollten das effizienteste Einkommenswachstum erzielen.'
+    ],
+    18 => [
+        'name' => 'Monde',
+        'desc' => 'Der Mond des Planeten ist der einzige Ort, an dem Strukturen wie ein Sprungtor oder eine Sensor-Phalanx gebaut werden k&ouml;nnen. Dar&uuml;ber hinaus wird die perfekte Umgebung f&uuml;r Flottenrettungen geschaffen, soda&szlig; du verhindern kannst, da&szlig; deine Flotten und vorr&auml;tigen Re&szlig;ourcen verloren gehen. Monde entstehen durch Orbitalschlachten, und da ihre Anwesenheit von unsch&auml;tzbarem Wert ist, lohnt es sich manchmal, Freunde oder Allianzmitglieder um Hilfe zu bitten, um einige deiner Schiffe bei einem kontrollierten Angriff zu zerst&ouml;ren, der normalerweise als Mondherstellung bezeichnet wird. Eine kleine, kalkulierte Anzahl von Schiffen gibt dir die M&ouml;glichkeit, einen Mond zu deinen eigenen Bedingungen zu haben. '
+    ],
+    19 => [
+        'name' => 'Gott sch&uuml;tze die Flotte!',
+        'desc' => 'Eine der besten Methoden, um ein Flottenrettungsman&ouml;ver durchzuf&uuml;hren, besteht darin, deine Schiffe mit Halten-Mi&szlig;ion von einem deiner eigenen Monde zu einem anderen zu schicken. Dank der Natur der Monde ist deine Flotte vor den Sensor Phalanxen unserer Feinde verborgen.'
+    ],
+    // Milit&auml;r
+    20 => [
+        'name' => 'Die Kraft der Gravitonen I',
+        'desc' => ''
+    ],
+    21 => [
+        'name' => 'Die Kraft der Gravitonen II',
+        'desc' => ''
+    ],
+    22 => [
+        'name' => 'Die Kraft der Gravitonen III',
+        'desc' => ''
+    ],
+    23 => [
+        'name' => 'Verr&auml;terische Schwerkraft I',
+        'desc' => ''
+    ],
+    24 => [
+        'name' => 'Verr&auml;terische Schwerkraft II',
+        'desc' => ''
+    ],
+    25 => [
+        'name' => 'Verr&auml;terische Schwerkraft III',
+        'desc' => ''
+    ],
+    26 => [
+        'name' => 'Spa&szlig; mit der Schwerkraft',
+        'desc' => ''
+    ],
+    27 => [
+        'name' => 'In zwei H&auml;lften zerrei&szlig;en',
+        'desc' => ''
+    ],
+    28 => [
+        'name' => 'K&ouml;nig der Gravitonen',
+        'desc' => ''
+    ],
+    29 => [
+        'name' => 'Orbitalsch&ouml;pfer I',
+        'desc' => ''
+    ],
+    30 => [
+        'name' => 'Orbitalsch&ouml;pfer II',
+        'desc' => ''
+    ],
+    31 => [
+        'name' => 'Orbitalsch&ouml;pfer III',
+        'desc' => ''
+    ],
+    32 => [
+        'name' => 'Vor deinen Feinden protzen I',
+        'desc' => ''
+    ],
+    33 => [
+        'name' => 'Vor deinen Feinden protzen II',
+        'desc' => ''
+    ],
+    34 => [
+        'name' => 'Vor deinen Feinden protzenIII',
+        'desc' => ''
+    ],
+    35 => [
+        'name' => 'Taktischer Vorteil I',
+        'desc' => ''
+    ],
+    36 => [
+        'name' => 'Taktischer Vorteil II',
+        'desc' => ''
+    ],
+    37 => [
+        'name' => 'Taktischer Vorteil III',
+        'desc' => ''
+    ],
+    38 => [
+        'name' => 'Vereinigte Kraft I',
+        'desc' => ''
+    ],
+    39 => [
+        'name' => 'Vereinigte Kraft II',
+        'desc' => ''
+    ],
+    40 => [
+        'name' => 'Vereinigte Kraft III',
+        'desc' => ''
+    ],
+    41 => [
+        'name' => 'Ernst gemeint I',
+        'desc' => ''
+    ],
+    42 => [
+        'name' => 'Ernst gemeint II',
+        'desc' => ''
+    ],
+    43 => [
+        'name' => 'Ernst gemeint III',
+        'desc' => ''
+    ],
+    44 => [
+        'name' => 'Ernst gemeint IV',
+        'desc' => ''
+    ],
+    45 => [
+        'name' => 'Ernst gemeint V',
+        'desc' => ''
+    ],
+    46 => [
+        'name' => 'Eine harte Nu&szlig; I',
+        'desc' => ''
+    ],
+    47 => [
+        'name' => 'Eine harte Nu&szlig; II',
+        'desc' => ''
+    ],
+    48 => [
+        'name' => 'Eine harte Nu&szlig; III',
+        'desc' => ''
+    ],
+    49 => [
+        'name' => 'Zerst&ouml;re deine Feinde I',
+        'desc' => ''
+    ],
+    50 => [
+        'name' => 'Zerst&ouml;re deine Feinde II',
+        'desc' => ''
+    ],
+    51 => [
+        'name' => 'Zerst&ouml;re deine Feinde III',
+        'desc' => ''
+    ],
+    52 => [
+        'name' => 'Kriegsbegegnungen I',
+        'desc' => ''
+    ],
+    53 => [
+        'name' => 'Kriegsbegegnungen II',
+        'desc' => ''
+    ],
+    54 => [
+        'name' => 'Kriegsbegegnungen III',
+        'desc' => ''
+    ],
+    55 => [
+        'name' => 'Abri&szlig;gruppe',
+        'desc' => ''
+    ],
+    56 => [
+        'name' => 'Mutige Rettung',
+        'desc' => ''
+    ],
+    57 => [
+        'name' => 'Teilen und herrschen',
+        'desc' => ''
+    ],
+    58 => [
+        'name' => 'Umwelt sch&uuml;tzen',
+        'desc' => ''
+    ],
+    59 => [
+        'name' => 'Ernten I',
+        'desc' => ''
+    ],
+    60 => [
+        'name' => 'Ernten II',
+        'desc' => ''
+    ],
+    61 => [
+        'name' => 'Ernten III',
+        'desc' => ''
+    ],
+    62 => [
+        'name' => 'Opfer I',
+        'desc' => ''
+    ],
+    63 => [
+        'name' => 'Opfer II',
+        'desc' => ''
+    ],
+    // Wirtschaft
+    64 => [
+        'name' => 'Wirtschaftsverbe&szlig;erungen I',
+        'desc' => ''
+    ],
+    65 => [
+        'name' => 'Wirtschaftsverbe&szlig;erungen II',
+        'desc' => ''
+    ],
+    66 => [
+        'name' => 'Wirtschaftsverbe&szlig;erungen III',
+        'desc' => ''
+    ],
+    67 => [
+        'name' => 'Wirtschaftskraft',
+        'desc' => ''
+    ],
+    68 => [
+        'name' => 'Wirtschaftswachstum',
+        'desc' => ''
+    ],
+    69 => [
+        'name' => 'Lagerlogistik',
+        'desc' => ''
+    ],
+    70 => [
+        'name' => 'Fortgeschrittenes Terraforming',
+        'desc' => ''
+    ],
+    71 => [
+        'name' => 'Kalter Kraftstoff',
+        'desc' => ''
+    ],
+    // Wi&szlig;enschaftliche Entwicklung
+    72 => [
+        'name' => 'Waffenverbe&szlig;erungen I',
+        'desc' => ''
+    ],
+    73 => [
+        'name' => 'Waffenverbe&szlig;erungen II',
+        'desc' => ''
+    ],
+    74 => [
+        'name' => 'Schildverbe&szlig;erungen I',
+        'desc' => ''
+    ],
+    75 => [
+        'name' => 'Schildverbe&szlig;erungen II',
+        'desc' => ''
+    ],
+    76 => [
+        'name' => 'R&uuml;stungsverbe&szlig;erungen I',
+        'desc' => ''
+    ],
+    77 => [
+        'name' => 'R&uuml;stungsverbe&szlig;erungen II',
+        'desc' => ''
+    ],
+    78 => [
+        'name' => 'Laserverbe&szlig;erungen I',
+        'desc' => ''
+    ],
+    79 => [
+        'name' => 'Laserverbe&szlig;erungen II',
+        'desc' => ''
+    ],
+    80 => [
+        'name' => 'Laserverbe&szlig;erungen III',
+        'desc' => ''
+    ],
+    81 => [
+        'name' => 'Verbe&szlig;erungen der Ionenkanonen I',
+        'desc' => ''
+    ],
+    82 => [
+        'name' => 'Verbe&szlig;erungen der Ionenkanonen II',
+        'desc' => ''
+    ],
+    83 => [
+        'name' => 'Verbe&szlig;erungen der Ionenkanonen III',
+        'desc' => ''
+    ],
+    84 => [
+        'name' => 'Plasmawerfer Verbe&szlig;erungen I',
+        'desc' => ''
+    ],
+    85 => [
+        'name' => 'Plasmawerfer Verbe&szlig;erungen II',
+        'desc' => ''
+    ],
+    86 => [
+        'name' => 'Plasmawerfer Verbe&szlig;erungen III',
+        'desc' => ''
+    ],
+    87 => [
+        'name' => 'Imperiales Forschungsnetzwerk',
+        'desc' => ''
+    ],
+    88 => [
+        'name' => 'Galaktisches Wi&szlig;enschaftszentrum',
+        'desc' => ''
+    ],
+    89 => [
+        'name' => 'Technokratie I',
+        'desc' => ''
+    ],
+    90 => [
+        'name' => 'Technokratie II',
+        'desc' => ''
+    ],
+    91 => [
+        'name' => 'Technokratie III',
+        'desc' => ''
+    ],
+    92 => [
+        'name' => 'Technokratie IV',
+        'desc' => ''
+    ],
+    93 => [
+        'name' => 'Technokratie V',
+        'desc' => ''
+    ],
+    // Unterst&uuml;tzung der Alliierten
+    94 => [
+        'name' => 'Abri&szlig; f&uuml;r eine richtige Sache I',
+        'desc' => ''
+    ],
+    95 => [
+        'name' => 'Abri&szlig; f&uuml;r eine richtige Sache II',
+        'desc' => ''
+    ],
+    96 => [
+        'name' => 'Abri&szlig; f&uuml;r eine richtige Sache III',
+        'desc' => ''
+    ],
+    97 => [
+        'name' => 'Abri&szlig; f&uuml;r eine richtige Sache IV',
+        'desc' => ''
+    ],
+    98 => [
+        'name' => 'Abri&szlig; f&uuml;r eine richtige Sache V',
+        'desc' => ''
+    ],
+    99 => [
+        'name' => 'Teamleiter I',
+        'desc' => ''
+    ],
+    100 => [
+        'name' => 'Teamleiter II',
+        'desc' => ''
+    ],
+    101 => [
+        'name' => 'Teamleiter III',
+        'desc' => ''
+    ],
+    // Universum Unterst&uuml;tzung
+    102 => [
+        'name' => 'Freundenetzwerk I',
+        'desc' => ''
+    ],
+    103 => [
+        'name' => 'Freundenetzwerk II',
+        'desc' => ''
+    ],
+    104 => [
+        'name' => 'Freundenetzwerk III',
+        'desc' => ''
+    ],
+    105 => [
+        'name' => 'Kopfgeldj&auml;ger I',
+        'desc' => ''
+    ],
+    106 => [
+        'name' => 'Kopfgeldj&auml;ger II',
+        'desc' => ''
+    ],
+    107 => [
+        'name' => 'Kopfgeldj&auml;ger III',
+        'desc' => ''
+    ],
+];
+
+$ _Lang ['TasksJobs'] = [
+    // Einf&uuml;hrung
+    1 => [
+        'Baue und verbe&szlig;ere die [tech=1] Metallmine [/tech] auf Level 8',
+        'Baue und verbe&szlig;ere die [tech=2] Kristallmine [/tech] auf Level 8',
+        'Baue und verbe&szlig;ere das [tech=4] Solarkraftwerk [/tech] auf Level 10'
+    ],
+    2 => [
+        'Baue und verbe&szlig;ere den [tech=3] Deuterium-Synthetisierer [/tech] auf Level 8'
+    ],
+    3 => [
+        'Baue und verbe&szlig;ere die [tech=14] Robotikfabrik [/tech] auf Level 2',
+        'Baue die [tech=21] Werft [/tech]',
+        'Baue 5.000 [tech=401] Raketenwerfer [/tech]'
+    ],
+    4 => [
+        'Verbe&szlig;ere den [tech=22] Metallmine [/tech] auf Level 5',
+        'Verbe&szlig;ere den [tech=23] Kristallmine [/tech] auf Level 5',
+        'Verbe&szlig;ere den [tech=24] Deuteriumtank [/tech] auf Stufe 5'
+    ],
+    5 => [
+        'Baue das [tech=31] Forschungslabor [/tech]',
+        'Entwickle [tech=108] Computertechnologie [/tech] auf Level 2',
+        'Entwickle [tech=113] Energietechnologie [/tech] auf Level 2'
+    ],
+    6 => [
+        'Verbe&szlig;ere die [tech=21] Schiffswert [/tech] auf Level 2',
+        'Entwickle [tech=115] Verbrennungsantrieb [/tech] auf Stufe 2',
+        'Baue 500 [tech=202] kleine Frachtschiffe [/tech]'
+    ],
+    7 => [
+        'Erforsche und baue ein [tech=208] Kolonieschiff [/tech]',
+        'Erstelle eine neue Kolonie auf einem anderen Planeten'
+    ],
+    8 => [
+        'Baue 200 [tech=212] Solarsatelliten [/tech]'
+    ],
+    9 => [
+        'Schalte [tech=210] Spionagesonden [/tech] frei und baue 100',
+        'Spionagemi&szlig;ion auf einem feindlichen Planeten durchf&uuml;hren',
+        'F&uuml;hre eine Simulation im Kampfsimulator durch'
+    ],
+    10 => [
+        'Schalte 100 [tech=209] Recycler [/tech] frei und baue sie',
+        'Recycle alle Tr&uuml;mmerfelder'
+    ],
+    11 => [
+        'Erstelle eine neue Allianz, tritt einer bestehenden bei oder lade jemanden zu deiner Freundesliste ein.'
+    ],
+    12 => [
+        'Schalte das [tech=219] Space Shuttle [/tech] frei und baue es',
+        '<b> (empfohlen) </b> Mach dich mit <b>Flottenrettungsman&ouml;vern</b> vertraut.'
+    ],
+    13 => [
+        'Verbe&szlig;ere [tech=108] Computertechnologie [/tech] auf Level 10',
+        'Baue [tech=15] Naniten-Fabriken [/tech] auf 3 beliebigen Kolonien'
+    ],
+    14 => [
+        'Baue 1[tech = 214] Tode&szlig;tern [/ tech]',
+        'Zerst&ouml;re einen Mond'
+    ],
+    15 => [
+        'Baue 50 [tech = 217] Mega-Frachtschiffe [/ tech]'
+    ],
+    16 => [
+        'Kolonisiere 10 Planeten (9 Kolonien + Mutterplanet)'
+    ],
+    17 => [
+        'Verbe&szlig;ere die [tech = 1] Metallmine [/tech] auf Level 20 auf 5 beliebigen Planeten',
+        'Verbe&szlig;ere die [tech = 2] Kristallmine [/tech] auf Level 20 auf 5 beliebigen Planeten',
+        'Verbe&szlig;ere den [tech = 3] Deuterium-Synthetisierer [/tech] auf Level 20 auf 5 beliebigen Planeten'
+    ],
+    18 => [
+        'Baue die [tech=41] Mondbasis [/ tech]'
+    ],
+    19 => [
+        'F&uuml;hre ein Flottenrettungsman&ouml;ver einer Flotte durch. Schicke deine Flotte mit Halten Mi&szlig;ion von einem Mond zum anderen. Die Flugzeit der Flotte mu&szlig; mindestens 6 Stunden betragen. '
+    ],
+    // Milit&auml;r
+    20 => [
+        'Zerst&ouml;re 50 Monde beliebigen Durchme&szlig;ers'
+    ],
+    21 => [
+        'Zerst&ouml;re 150 Monde beliebigen Durchme&szlig;ers'
+    ],
+    22 => [
+        'Zerst&ouml;re 500 Monde beliebigen Durchme&szlig;ers'
+    ],
+    23 => [
+        'Zerst&ouml;re 50 Monde beliebigen Durchme&szlig;ers, ohne deine Flotte in dieser Schlacht zu verlieren. <br/> (Die Zerst&ouml;rung des Mondes darf die Flotte nicht zerst&ouml;ren.)'
+    ],
+    24 => [
+        'Zerst&ouml;re 100 Monde beliebigen Durchme&szlig;ers, ohne deine Flotte in dieser Schlacht zu verlieren. <br/> (Die Zerst&ouml;rung des Mondes darf die Flotte nicht zerst&ouml;ren.)'
+    ],
+    25 => [
+        'Zerst&ouml;re 200 Monde beliebigen Durchme&szlig;ers, ohne deine Flotte in dieser Schlacht zu verlieren. <br/> (Die Zerst&ouml;rung des Mondes darf die Flotte nicht zerst&ouml;ren.)'
+    ],
+    26 => [
+        Zerst&ouml;re 50 Monde von mindestens 8.000 km. im Durchme&szlig;er, ohne Ihre Flotte in dieser Schlacht zu verlieren <br/> (die Zerst&ouml;rung des Mondes darf die Flotte nicht zerst&ouml;ren) '
+    ],
+    27 => [
+        'Zerst&ouml;re 25 Monde mindestens 9.000 km. im Durchme&szlig;er'
+    ],
+    28 => [
+        'Zerst&ouml;re 5 Monde mindestens 9.900 km. im Durchme&szlig;er'
+    ],
+    29 => [
+        'Erschaffe 100 Monde mit beliebigem Durchme&szlig;er und jedem Kampftyp.'
+    ],
+    30 => [
+        'Erschaffe 250 Monde mit beliebigem Durchme&szlig;er und jedem Kampftyp.'
+    ],
+    31 => [
+        'Erschaffe 500 Monde mit beliebigem Durchme&szlig;er und jedem Kampftyp.'
+    ],
+    32 => [
+        'Zerst&ouml;re insgesamt 100.000.000 feindliche Milit&auml;reinheiten (Schiffe oder Verteidigung&szlig;ysteme).'
+    ],
+    33 => [
+        'Zerst&ouml;re insgesamt 1.000.000.000 feindliche Milit&auml;reinheiten (Schiffe oder Verteidigung&szlig;ysteme).'
+    ],
+    34 => [
+        'Zerst&ouml;re insgesamt 5.000.000.000 feindliche Milit&auml;reinheiten (Schiffe oder Verteidigung&szlig;ysteme).'
+    ],
+    35 => [
+        'Zerst&ouml;re eine feindliche Flotte (im Einzelkampf) im Wert von mindestens 10.000.000 Statuspunkten, wobei die Kosten deiner Flotte maximal 60% der Kosten der feindlichen Flotte betragen.'
+    ],
+    36 => [
+        'Zerst&ouml;re eine feindliche Flotte (im Einzelkampf) im Wert von mindestens 300.000.000 Statuspunkten, wobei die Kosten deiner Flotte maximal 50% der Kosten der feindlichen Flotte betragen.'
+    ],
+    37 => [
+        'Zerst&ouml;re eine feindliche Flotte (im Einzelkampf) im Wert von mindestens 1.000.000.000 Statuspunkten, wobei die Kosten deiner Flotte maximal 40% der Kosten der feindlichen Flotte betragen.'
+    ],
+    38 => [
+        'Zerst&ouml;re 3 feindliche Flotten (in einer gemeinsamen Schlacht) im Wert von mindestens 10.000.000 Statuspunkten, wobei die Kosten deiner Flotten maximal 35% der Kosten der feindlichen Flotten betragen.'
+    ],
+    39 => [
+        'Zerst&ouml;re 3 feindliche Flotten (in einer gemeinsamen Schlacht) im Wert von mindestens 500.000.000 Statuspunkten, wobei die Kosten deiner Flotten maximal 30% der Kosten der feindlichen Flotten betragen.'
+    ],
+    40 => [
+        'Zerst&ouml;re 3 feindliche Flotten (in einer gemeinsamen Schlacht) im Wert von mindestens 1.500.000.000 Statuspunkten, wobei die Kosten deiner Flotten maximal 25% der Kosten der feindlichen Flotten betragen.'
+    ],
+    41 => [
+        'Gewinne 1.000 Schlachten jeglicher Art'
+    ],
+    42 => [
+        'Gewinne 5.000 Schlachten jeglicher Art'
+    ],
+    43 => [
+        'Gewinne 10.000 Schlachten jeglicher Art'
+    ],
+    44 => [
+        'Gewinne 25.000 Schlachten jeglicher Art'
+    ],
+    45 => [
+        'Gewinne 50.000 Schlachten jeglicher Art'
+    ],
+    46 => [
+        'Gewinne oder erreiche ein Unentschieden bei 25 Solo-Angriffen, bei denen Tr&uuml;mmer von Verteidiger-Einheiten eine Wahrscheinlichkeit von mindestens 100.000% f&uuml;r die Erschaffung des Mondes ausmachen.'
+    ],
+    47 => [
+        'Gewinne oder erreiche ein Unentschieden bei 50 Solo-Angriffen, bei denen Tr&uuml;mmer von Verteidiger-Einheiten eine Wahrscheinlichkeit von mindestens 100.000% f&uuml;r die Erschaffung des Mondes ausmachen.'
+    ],
+    48 => [
+        'Gewinne oder erreiche ein Unentschieden bei 100 Solo-Angriffen, bei denen Tr&uuml;mmer von Verteidiger-Einheiten eine Wahrscheinlichkeit von mindestens 100.000% f&uuml;r die Erschaffung des Mondes ausmachen.'
+    ],
+    49 => [
+        'Gewinne oder erreiche ein Unentschieden bei 15 Solo-Angriffen, bei denen Tr&uuml;mmer von Verteidiger-Einheiten eine Wahrscheinlichkeit von mindestens 500.000% f&uuml;r die Erschaffung des Mondes ausmachen.'
+    ],
+    50 => [
+        'Gewinne oder erreiche ein Unentschieden bei 30 Solo-Angriffen, bei denen Tr&uuml;mmer von Verteidiger-Einheiten eine Wahrscheinlichkeit von mindestens 500.000% f&uuml;r die Erschaffung des Mondes ausmachen.'
+    ],
+    51 => [
+        'Gewinne oder erreiche ein Unentschieden bei 50 Solo-Angriffen, bei denen Tr&uuml;mmer von Verteidigern \' Einheiten eine Wahrscheinlichkeit von mindestens 500.000% f&uuml;r die Erschaffung des Mondes ausmachen. '
+    ],
+    52 => [
+        'Gewinne oder erreiche ein Unentschieden bei 15 Angriffen, bei denen Tr&uuml;mmer von Verteidigereinheiten mindestens 1.000.000% der Wahrscheinlichkeit einer Mondsch&ouml;pfung ausmachen.'
+    ],
+    53 => [
+        'Gewinne oder erreiche ein Unentschieden bei 30 Angriffen, bei denen Tr&uuml;mmer von Verteidigereinheiten mindestens 1.000.000% der Wahrscheinlichkeit einer Mondsch&ouml;pfung ausmachen.'
+    ],
+    54 => [
+        'Gewinne oder erreiche ein Unentschieden bei 50 Angriffen, bei denen Tr&uuml;mmer von Verteidigereinheiten mindestens 1.000.000% der Wahrscheinlichkeit einer Mondsch&ouml;pfung ausmachen.'
+    ],
+    55 => [
+        'Gewinne oder erreiche ein Unentschieden bei 5 Vereinsangriffen, wo Tr&uuml;mmer von Verteidigereinheiten mindestens 5.000.000% der Wahrscheinlichkeit einer Mondsch&ouml;pfung ausmachen'
+    ],
+    56 => [
+        'Verhindere die Zerst&ouml;rung eines deiner Monde durch eine feindliche Flotte, die aus mindestens 1.000 Tode&szlig;ternen besteht. <br/> (Die Tode&szlig;terne des Feindes d&uuml;rfen keine Gravitonen auf deinen Mond abfeuern.)'
+    ],
+    57 => [
+        'Erreiche die Gesamtsumme der Mondsch&ouml;pfungschance aus allen gewonnenen oder gezogenen Einzelk&auml;mpfen in H&ouml;he von 50.000.000% <br/>'
+    ],
+    58 => [
+        'Recycle in Summe 30.000.000.000.000 Einheiten Metall aus Tr&uuml;mmerfeldern <br/>',
+        'Recycle in Summe 15.000.000.000.000 Einheiten Kristall aus Tr&uuml;mmerfeldern <br/>',
+    ],
+    59 => [
+        'Pl&uuml;ndere in Summe 100.000.000.000 Einheiten Metall von angegriffenen Planeten und / oder Monden <br/>',
+        'Pl&uuml;ndere in Summe 100.000.000.000 Einheiten Kristall von angegriffenen Planeten und / oder Monden <br/>',
+        'Pl&uuml;ndere in Summe 100.000.000.000 Einheiten Deuterium von angegriffenen Planeten und / oder Monden <br/>',
+    ],
+    60 => [
+        'Pl&uuml;ndere in Summe 500.000.000.000 Einheiten Metall von angegriffenen Planeten und / oder Monden <br/>',
+        'Pl&uuml;ndere in Summe 500.000.000.000 Einheiten Kristall von angegriffenen Planeten und / oder Monden <br/>',
+        'Pl&uuml;ndere in Summe 500.000.000.000 Einheiten Deuterium von angegriffenen Planeten und / oder Monden <br/>',
+    ],
+    61 => [
+        'Pl&uuml;ndere in Summe 1.000.000.000.000 Einheiten Metall von angegriffenen Planeten und / oder Monden pl&uuml;ndern <br/>',
+        'Pl&uuml;ndere in Summe 1.000.000.000.000 Einheiten Kristall von angegriffenen Planeten und / oder Monden pl&uuml;ndern <br/>',
+        'Pl&uuml;ndere in Summe 1.000.000.000.000 Einheiten Deuterium von angegriffenen Planeten und / oder Monden pl&uuml;ndern <br/>',
+    ],
+    62 => [
+        'Baue in Summe 1.000.000.000 [tech=204] leichte [/tech] oder [tech=205] schwere K&auml;mpfer [/tech]'
+    ],
+    63 => [
+        'Baue in Summe 10.000.000.000 [tech=204] leichte [/tech] oder [tech=205] schwere K&auml;mpfer [/tech]'
+    ],
+    // Wirtschaft
+    64 => [
+        'Verbe&szlig;ere die [tech=1] Metallmine [/tech] auf Level 30 auf 10 verschiedenen Planeten',
+        'Verbe&szlig;ere die [tech=2] Kristallmine [/tech] auf Level 30 auf 10 verschiedenen Planeten',
+        'Verbe&szlig;ere den [tech=3] Deuterium-Synthesizer [/tech] auf Level 30 auf 10 verschiedenen Planeten',
+    ],
+    65 => [
+        'Verbe&szlig;ere die [tech=1] Metallmine [/tech] auf Level 40 auf 10 verschiedenen Planeten',
+        'Verbe&szlig;ere die [tech=2] Kristallmine [/tech] auf Stufe 40 auf 10 verschiedenen Planeten',
+        'Verbe&szlig;ere den [tech=3] Deuterium-Synthesizer [/tech] auf Level 40 auf 10 verschiedenen Planeten',
+    ],
+    66 => [
+        'Verbe&szlig;ere die [tech=1] Metallmine [/tech] auf Level 50 auf 5 verschiedenen Planeten',
+        'Verbe&szlig;ere die [tech=2] Kristallmine [/tech] auf Stufe 50 auf 5 verschiedenen Planeten',
+        'Verbe&szlig;ere den [tech=3] Deuterium-Synthesizer [/tech] auf Level 50 auf 5 verschiedenen Planeten',
+    ],
+    67 => [
+        'Verbe&szlig;ere die [tech=1] Metallmine [/tech] auf Level 50 auf 10 verschiedenen Planeten',
+        'Verbe&szlig;ere die [tech=2] Kristallmine [/tech] auf Level 50 auf 10 verschiedenen Planeten',
+        'Verbe&szlig;ere den [tech=3] Deuterium-Synthesizer [/tech] auf Level 50 auf 10 verschiedenen Planeten',
+    ],
+    68 => [
+        'Erreiche auf einem beliebigen Planeten eine Metallgewinnungsrate von 45.000.000 Einheiten pro Stunde (ohne Geologenbonus)',
+        'Erreiche auf einem beliebigen Planeten eine Kristall-Extraktionsrate von 30.000.000 Einheiten pro Stunde (ohne Geologen-Bonus)',
+        'Erreiche auf einem beliebigen Planeten eine Deuterium-Extraktionsrate von 22.000.000 Einheiten pro Stunde (ohne Geologenbonus)',
+    ],
+    69 => [
+        'Verbe&szlig;ere den [tech=22] Metallspeicher [/tech] auf Stufe 25 auf 5 verschiedenen Planeten',
+        'Verbe&szlig;ere den [tech=23] Kristallspeicher [/tech] auf Stufe 25 auf 5 verschiedenen Planeten',
+        'Verbe&szlig;ere den [tech=24] Deuteriumtank [/tech] auf Stufe 25 auf 5 verschiedenen Planeten',
+    ],
+    70 => [
+        'Schaffe mindestens 700 Felder mit [tech=33] Terraformer [/tech].'
+    ],
+    71 => [
+        'Erreichen Sie kumulativ auf allen Planeten eine Deuterium-Extraktionsrate von 200.000.000 Einheiten pro Stunde (ohne Geologenbonus)'
+    ],
+    // Wi&szlig;enschaftliche Entwicklung
+    72 => [
+        'Verbe&szlig;ere [tech=109] Waffentechnologie [/tech] auf Stufe 25'
+    ],
+    73 => [
+        'Verbe&szlig;ere [tech=109] Waffentechnologie [/tech] auf Level 30'
+    ],
+    74 => [
+        'Verbe&szlig;ere [tech=110] Abschirmtechnologie [/tech] auf Stufe 25'
+    ],
+    75 => [
+        'Verbe&szlig;ere [tech=110] Abschirmtechnologie [/tech] auf Level 30'
+    ],
+    76 => [
+        'Verbe&szlig;ere [tech=111] R&uuml;stungstechnologie [/tech] auf Stufe 25'
+    ],
+    77 => [
+        'Verbe&szlig;ere [tech=111] R&uuml;stungstechnologie [/tech] auf Level 30'
+    ],
+    78 => [
+        'Verbe&szlig;ere [tech=120] Lasertechnologie [/tech] auf Stufe 25'
+    ],
+    79 => [
+        'Verbe&szlig;ere [tech=120] Lasertechnologie [/tech] auf Level 30'
+    ],
+    80 => [
+        'Verbe&szlig;ere [tech=120] Lasertechnologie [/tech] auf Level 33'
+    ],
+    81 => [
+        'Verbe&szlig;ere [tech=121] Ionentechnologie [/tech] auf Level 20'
+    ],
+    82 => [
+        'Verbe&szlig;ere [tech=121] Ionentechnologie [/tech] auf Level 25'
+    ],
+    83 => [
+        'Verbe&szlig;ere [tech=121] Ionentechnologie [/tech] auf Level 28'
+    ],
+    84 => [
+        'Verbe&szlig;ere [tech=122] Plasmatechnologie [/tech] auf Level 20'
+    ],
+    85 => [
+        'Verbe&szlig;ere [tech=122] Plasmatechnologie [/tech] auf Stufe 25'
+    ],
+    86 => [
+        'Verbe&szlig;ere [tech=122] Plasmatechnologie [/tech] auf Level 28'
+    ],
+    87 => [
+        'Verbe&szlig;ere [tech=123] die Technologie des intergalaktischen Forschungsnetzwerks [/tech] auf Stufe 9'
+    ],
+    88 => [
+        'Verbe&szlig;ere das [tech=31] Forschungslabor [/tech] auf Stufe 22 auf 10 verschiedenen Planeten'
+    ],
+    89 => [
+        'Erreiche 5.000.000 Punkte in den Forschung&szlig;tatistiken'
+    ],
+    90 => [
+        'Erreiche 10.000.000 Punkte in den Forschung&szlig;tatistiken'
+    ],
+    91 => [
+        'Erreiche 50.000.000 Punkte in den Forschung&szlig;tatistiken'
+    ],
+    92 => [
+        'Erreiche 200.000.000 Punkte in den Forschung&szlig;tatistiken'
+    ],
+    93 => [
+        'Erreiche 500.000.000 Punkte in den Forschung&szlig;tatistiken'
+    ],
+    // Unterst&uuml;tzung der Alliierten
+    94 => [
+        'Erstelle 5 Monde jeglicher Art f&uuml;r deine Verb&uuml;ndeten'
+    ],
+    95 => [
+        'Erstelle 20 Monde jeglicher Art f&uuml;r deine Verb&uuml;ndeten'
+    ],
+    96 => [
+        'Erstelle 50 Monde jeglicher Art f&uuml;r deine Verb&uuml;ndeten'
+    ],
+    97 => [
+        'Erstelle 125 Monde jeglicher Art f&uuml;r deine Verb&uuml;ndeten'
+    ],
+    98 => [
+        'Erstelle 250 Monde jeglicher Art f&uuml;r deine Verb&uuml;ndeten'
+    ],
+    99 => [
+        'Gewinne oder erreiche ein Unentschieden in 25 vereinigten Schlachten (w&auml;hrend du der Anf&uuml;hrer der Schlacht bist), in denen Tr&uuml;mmer von Verteidigereinheiten mindestens 10.000% der Chance auf Mondsch&ouml;pfung ausmachen.'
+    ],
+    100 => [
+        'Gewinne oder erreiche ein Unentschieden in 50 vereinten Schlachten (w&auml;hrend du der Anf&uuml;hrer der Schlacht bist), in denen Tr&uuml;mmer von Verteidigereinheiten mindestens 10.000% der Chance auf Mondsch&ouml;pfung ausmachen.'
+    ],
+    101 => [
+        'Gewinne oder erreiche ein Unentschieden in 150 vereinten Schlachten (w&auml;hrend du der Anf&uuml;hrer der Schlacht bist), in denen Tr&uuml;mmer von Verteidigereinheiten mindestens 10.000% der Chance auf Mondsch&ouml;pfung ausmachen.'
+    ],
+    // Universumsunterst&uuml;tzung
+    102 => [
+        'Bring 10 neue Spieler ins Spiel'
+    ],
+    103 => [
+        'Bring 20 neue Spieler ins Spiel'
+    ],
+    104 => [
+        'Bring 40 neue Spieler ins Spiel'
+    ],
+    105 => [
+        'Bring einen neuen Spieler ins Spiel, der mindestens 40 Einheiten Dunkler Energie in einer Transaktion kauft.<br/>(Angebote nicht eingeschlo&szlig;en)'
+    ],
+    106 => [
+        'Bring 5 neue Spieler ins Spiel, die einen beliebige Menge Dunkler Energie kaufen'
+    ],
+    107 => [
+        'Bring neue Spieler ins Spiel, die in Summe 400 Einheiten Dunkler Energie kaufen<br/>(Angebote nicht eingeschlo&szlig;en)'
+    ],
+];
+
+?>
