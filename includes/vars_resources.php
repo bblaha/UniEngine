@@ -43,6 +43,7 @@ if(defined('INSIDE'))
         124 => 'tech_expedition',
         125 => 'tech_antimatter',
         126 => 'tech_disintegration',
+        130 => 'tech_resource_all',
         199 => 'tech_graviton',
 
         // Ships

@@ -76,6 +76,7 @@ $_Lang['tech'] = array
     124 => 'Expedition technology',
     125 => 'Anti-matter technology',
     126 => 'Disintegration stream technology',
+    130 => 'Resource refinement technology',
     199 => 'Graviton technology',
 
     200 => 'Space ships',

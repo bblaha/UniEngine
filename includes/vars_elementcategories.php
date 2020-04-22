@@ -17,6 +17,7 @@ if(defined('INSIDE'))
 
     $_Vars_ElementCategories['techPurpose'] = [
         'combat' => [ 109, 110, 111, 120, 121, 122, 125, 126, 199, ],
+        'resource' => [ 130, ],
     ];
 }
 

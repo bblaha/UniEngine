@@ -139,6 +139,10 @@ $_Lang['WorldElements_Detailed'] = [
         'description_short' => 'The Distintegration stream technology is the pinnacle of advanced weaponry research branch. A deadly beam of energy destroys every material structure it encounters on its path.',
         'description_extra' => 'Each developed level increases the efficiency of all ships\' and defence systems\' weapons using this technology by 5%.',
     ],
+    130 => [
+        'description_short' => 'Thanks to this technology all your resource production is increased',
+        'description_extra' => 'Each developed level increases the efficiency of all mines, and synthesisers. Formula is 3% * level^0.7'
+    ],
     199 => [
         'description_short' => 'By firing a concentrated beam of gravitons, an artificial gravitational field can be constructed, which can easily destroy space ships and even entire moons.',
         'description_extra' => 'Each developed level increases the efficiency of all ships\' and defence systems\' weapons using this technology by 5%.',

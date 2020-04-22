@@ -2,6 +2,7 @@
 action_logs/
 cache/
 tmp/
+.idea/
 
 # Ignore installation-related files
 install/lock

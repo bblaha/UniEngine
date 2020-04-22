@@ -1,41 +1,45 @@
 <?php
+use UniEngine\Engine\Modules\Resources;
 
 if(defined('INSIDE'))
 {
     $_Vars_ResProduction = [
         // Metal Mine
         1 => [
-            'production' => function ($params) {
+            'production' => function ($params, &$user) {
                 $level = $params['level'];
                 $productionFactor = $params['productionFactor'];
+                $resourceTechs = Resources\Utils\Initializers\initResourceTechnologiesMap([
+                            'user' => $user,
+                        ]);
 
                 return [
-                    'metal' => ((30 * $level * pow((1.1), $level)) * (0.1 * $productionFactor)),
+                    'metal' => ((30 * $level * pow((1.1), $level)) * (0.1 * $productionFactor)) * ((0.3) * pow(($resourceTechs[0]), (0.7))),
                     'energy' => (-1 * ((10 * $level * pow((1.1), $level)) * (0.1 * $productionFactor)))
                 ];
             }
         ],
         // Crystal Mine
         2 => [
-            'production' => function ($params) {
+            'production' => function ($params, &$user) {
                 $level = $params['level'];
                 $productionFactor = $params['productionFactor'];
 
                 return [
-                    'crystal' => ((20 * $level * pow((1.1), $level)) * (0.1 * $productionFactor)),
+                    'crystal' => ((20 * $level * pow((1.1), $level)) * (0.1 * $productionFactor)) * ((0.3) * pow(($resourceTechs[0]), (0.7))),
                     'energy' => (-1 * ((10 * $level * pow((1.1), $level)) * (0.1 * $productionFactor)))
                 ];
             }
         ],
         // Deuterium Extractor
         3 => [
-            'production' => function ($params) {
+            'production' => function ($params, &$user) {
                 $level = $params['level'];
                 $productionFactor = $params['productionFactor'];
                 $planetTemp = $params['planetTemp'];
 
                 return [
-                    'deuterium' => (((10 * $level * pow((1.1), $level)) * (-0.002 * $planetTemp + 1.28)) * (0.1 * $productionFactor)),
+                    'deuterium' => (((10 * $level * pow((1.1), $level)) * (-0.002 * $planetTemp + 1.28)) * (0.1 * $productionFactor)) * ((0.3) * pow(($resourceTechs[0]), (0.7))),
                     'energy' => (-1 * ((20 * $level * pow((1.1), $level)) * (0.1 * $productionFactor)))
                 ];
             }
