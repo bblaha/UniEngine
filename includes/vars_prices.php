@@ -298,8 +298,8 @@ if(defined('INSIDE'))
             'crystal' => 1000,
             'deuterium' => 500,
             'energy' => 0,
-            'factor' => 1.5,
-        )
+            'factor' => 1.5
+        ),
         199 => array
         (
             'metal' => 0,
