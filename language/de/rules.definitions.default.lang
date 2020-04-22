@@ -5,63 +5,63 @@ $ _Lang ['RulesDefinitions'] = [
         'title' => 'Introduction',
         'elements' => [
             // [MODIFIABLE]
-            0 => 'Das folgende Dokument mit den Nutzungsbedingungen ist ein Beispiel, das von den UniEngine-Entwicklern bereitgestellt wurde. Es sollte zuerst von den Spieleigentümern oder der Administration überprüft werden, bevor das Spiel auf den Produktionsservern veröffentlicht wird. Die UniEngine-Entwickler garantieren nicht, dass diese Liste von Regeln mit einem Rechtssystem kompatibel ist.',
+            0 => 'Das folgende Dokument mit den Nutzungsbedingungen ist ein Beispiel, das von den UniEngine-Entwicklern bereitgestellt wurde. Es sollte zuerst von den Spieleigent&uuml;mern oder der Administration &uuml;berpr&uuml;ft werden, bevor das Spiel auf den Produktionsservern ver&ouml;ffentlicht wird. Die UniEngine-Entwickler garantieren nicht, dass diese Liste von Regeln mit einem Rechtssystem kompatibel ist.',
 
-            1 => 'Alle Spieler <b> müssen </ b> die Nutzungsbedingungen akzeptieren, bevor sie den Registrierungsprozess für das Konto abschließen. Alle Aktionen im Spiel sind verboten, wenn die Bedingungen nicht akzeptiert wurden. Das Akzeptieren der Bedingungen bedeutet, dass der Benutzer alle Allgemeinen Geschäftsbedingungen anerkennt, versteht und akzeptiert.',
+            1 => 'Alle Spieler <b> m&uuml;ssen </ b> die Nutzungsbedingungen akzeptieren, bevor sie den Registrierungsprozess f&uuml;r das Konto abschliessen. Alle Aktionen im Spiel sind verboten, wenn die Bedingungen nicht akzeptiert wurden. Das Akzeptieren der Bedingungen bedeutet, dass der Benutzer alle Allgemeinen Gesch&auml;ftsbedingungen anerkennt, versteht und akzeptiert.',
 
-            2 => 'Eine Erweiterung dieser Bedingungen wird in Form einer <a href="redirect.php?id=4"> <b> Liste der Verstöße </b> </a> bereitgestellt, die Verstöße und ihre jeweiligen Strafen enthält. Die Liste ist jedoch nur eine Richtlinie für die Spielbetreiber und spiegelt möglicherweise nicht die Bestrafung wider, die dem Konto des Benutzers auferlegt wurde.',
+            2 => 'Eine Erweiterung dieser Bedingungen wird in Form einer <a href="redirect.php?id=4"> <b> Liste der Verst&ouml;sse </b> </a> bereitgestellt, die Verst&ouml;sse und ihre jeweiligen Strafen enth&auml;lt. Die Liste ist jedoch nur eine Richtlinie f&uuml;r die Spielbetreiber und spiegelt m&ouml;glicherweise nicht die Bestrafung wider, die dem Konto des Benutzers auferlegt wurde.',
 
-            3 => 'Jeder Benutzer akzeptiert die Tatsache, dass die Unkenntnis der <b> Nutzungsbedingungen </b> ihn nicht von der Verantwortung für seine Aktionen im Spiel entbindet und alle Einsprüche mit offensichtlicher Unkenntnis der Nutzungsbedingungen abgelehnt werden.',
+            3 => 'Jeder Benutzer akzeptiert die Tatsache, dass die Unkenntnis der <b> Nutzungsbedingungen </b> ihn nicht von der Verantwortung f&uuml;r seine Aktionen im Spiel entbindet und alle Einspr&uuml;che mit offensichtlicher Unkenntnis der Nutzungsbedingungen abgelehnt werden.',
 
             4 => [
                 'elements' => [
-                    1 => 'Die Eigentümer des Spiels sind alle Personen, die die vollen Eigentumsrechte an den im Spiel präsentierten Spielservern, Domänen, Dateien und Inhalten haben (mit Ausnahme von vom Benutzer bereitgestellten Inhalten), einschließlich aller Unterseiten und Unterservices (wie ein Forum oder ein Social-Media-Konto). Ein Spielebesitzer kann jederzeit als Administrator oder Spielbetreiber fungieren.',
+                    1 => 'Die Eigent&uuml;mer des Spiels sind alle Personen, die die vollen Eigentumsrechte an den im Spiel pr&auml;sentierten Spielservern, Dom&auml;nen, Dateien und Inhalten haben (mit Ausnahme von vom Benutzer bereitgestellten Inhalten), einschliesslich aller Unterseiten und Unterservices (wie ein Forum oder ein Social-Media-Konto). Ein Spielebesitzer kann jederzeit als Administrator oder Spielbetreiber fungieren.',
 
-                    2 => 'Die Administratoren des Spiels sind alle Personen, denen der uneingeschränkte Zugriff auf die Verwaltungstools und -privilegien gewährt wurde, um die Ordnung zu wahren und alle Streitigkeiten im Spiel beizulegen (z. B. Einsprüche der Spieler). Ein Spieladministrator fungiert als Vertreter der Spielebesitzer.',
+                    2 => 'Die Administratoren des Spiels sind alle Personen, denen der uneingeschr&auml;nkte Zugriff auf die Verwaltungstools und -privilegien gew&auml;hrt wurde, um die Ordnung zu wahren und alle Streitigkeiten im Spiel beizulegen (z. B. Einspr&uuml;che der Spieler). Ein Spieladministrator fungiert als Vertreter der Spielebesitzer.',
 
-                    3 => 'Die Mitglieder des Supportteams sind alle Personen, die die Rolle von Moderatoren oder Supermoderatoren erfüllen und denen nur eingeschränkter Zugriff auf die Verwaltungstools und -privilegien gewährt wurde, um die Ordnung aufrechtzuerhalten und einige Probleme im Spiel zu lösen Streitigkeiten. Ein Support-Teammitglied fungiert als Vermittler zwischen Spielbenutzern und Administratoren. ',
+                    3 => 'Die Mitglieder des Supportteams sind alle Personen, die die Rolle von Moderatoren oder Supermoderatoren erf&uuml;llen und denen nur eingeschr&auml;nkter Zugriff auf die Verwaltungstools und -privilegien gew&auml;hrt wurde, um die Ordnung aufrechtzuerhalten und einige Probleme im Spiel zu l&ouml;sen Streitigkeiten. Ein Support-Teammitglied fungiert als Vermittler zwischen Spielbenutzern und Administratoren. ',
 
                     4 => [
-                        'maintext' => 'Die Entscheidungshierarchie lautet wie folgt (erste Position - höchster Entscheidungsrang; letzte Position - niedrigster Entscheidungsrang):',
+                        'maintext' => 'Die Entscheidungshierarchie lautet wie folgt (erste Position - h&ouml;chster Entscheidungsrang; letzte Position - niedrigster Entscheidungsrang):',
                         'ul' => [
-                            "Spielebesitzer",
+                            'Spielebesitzer',
 
-                            "Administratoren",
+                            'Administratoren',
 
                             'Supermoderator (Support-Team)',
 
-                            "Moderator (Support-Team)"
+                            'Moderator (Support-Team)'
                         ]]
                     ],
 
                     5 => 'Das Management-Team des Forums (falls ein Spielforum vorhanden ist) nimmt an keiner Entscheidungsfindung im Spiel teil, es sei denn, es fungiert als eine der oben genannten Rollen.',
 
-                    6 => 'Das Team der Spieleentwickler fungiert nicht als eine der oben genannten Entscheidungsrollen im Spiel, obwohl sie ähnliche Zugriffsrechte wie die Administratoren oder sogar Spielebesitzer haben. Ihre Aufgabe ist es, die Engine-Entwicklung des Spiels zu verwalten, indem sie neue Funktionen hinzufügen, Fehler beheben und das Gesamterlebnis der Spieler verbessern. Sie interagieren nicht mit den Spielern (das bedeutet, sie bearbeiten keine Beschwerden, Einsprüche, Entscheidungen im Zusammenhang mit Regelverstößen), können jedoch in bestimmten Fällen Kontakt mit Spielern aufnehmen (z. B. wenn ein Fehler von einem Spieler gemeldet wurde).',
+                    6 => 'Das Team der Spieleentwickler fungiert nicht als eine der oben genannten Entscheidungsrollen im Spiel, obwohl sie &auml;hnliche Zugriffsrechte wie die Administratoren oder sogar Spielebesitzer haben. Ihre Aufgabe ist es, die Engine-Entwicklung des Spiels zu verwalten, indem sie neue Funktionen hinzuf&uuml;gen, Fehler beheben und das Gesamterlebnis der Spieler verbessern. Sie interagieren nicht mit den Spielern (das bedeutet, sie bearbeiten keine Beschwerden, Einspr&uuml;che, Entscheidungen im Zusammenhang mit Regelverst&ouml;ssen), k&ouml;nnen jedoch in bestimmten F&auml;llen Kontakt mit Spielern aufnehmen (z. B. wenn ein Fehler von einem Spieler gemeldet wurde).',
                 ]]
             ],
 
-            5 => 'Die Spielebesitzer behalten sich das Recht vor, die Nutzungsbedingungen und die Liste der Verstöße jederzeit zu ändern. Die geänderten Bestimmungen treten zum Zeitpunkt ihrer Veröffentlichung in Kraft, die Änderungen müssen jedoch von jedem Spieler akzeptiert werden.',
+            5 => 'Die Spielebesitzer behalten sich das Recht vor, die Nutzungsbedingungen und die Liste der Verst&ouml;sse jederzeit zu &auml;ndern. Die ge&auml;nderten Bestimmungen treten zum Zeitpunkt ihrer Ver&ouml;ffentlichung in Kraft, die &auml;nderungen m&uuml;ssen jedoch von jedem Spieler akzeptiert werden.',
 
-            6 => 'Der Spieler, der mit den geänderten Nutzungsbedingungen nicht einverstanden ist und diese nicht akzeptieren möchte, ist verpflichtet, sein Spielkonto so schnell wie möglich zu löschen. Weiteres Spielen ohne Aktivierung des Löschvorgangs ist erst möglich, wenn die geänderten Bestimmungen akzeptiert wurden. In bestimmten Fällen können die Spielebesitzer oder die Administration ein spezielles automatisiertes System aktivieren, das das weitere Spielen verhindert, ohne die Änderungen zu akzeptieren.',
+            6 => 'Der Spieler, der mit den ge&auml;nderten Nutzungsbedingungen nicht einverstanden ist und diese nicht akzeptieren m&ouml;chte, ist verpflichtet, sein Spielkonto so schnell wie m&ouml;glich zu l&ouml;schen. Weiteres Spielen ohne Aktivierung des L&ouml;schvorgangs ist erst m&ouml;glich, wenn die ge&auml;nderten Bestimmungen akzeptiert wurden. In bestimmten F&auml;llen k&ouml;nnen die Spielebesitzer oder die Administration ein spezielles automatisiertes System aktivieren, das das weitere Spielen verhindert, ohne die &auml;nderungen zu akzeptieren.',
 
-            7 => 'Wenn der Spieler Mängel oder Unklarheiten in den Nutzungsbedingungen feststellt, sollte er dies der Verwaltung melden und auf seine Antwort warten. Wenn die Administration mit den Anmerkungen einverstanden ist, können sie die Bestimmungen hinzufügen oder ändern.',
+            7 => 'Wenn der Spieler M&auml;ngel oder Unklarheiten in den Nutzungsbedingungen feststellt, sollte er dies der Verwaltung melden und auf seine Antwort warten. Wenn die Administration mit den Anmerkungen einverstanden ist, k&ouml;nnen sie die Bestimmungen hinzuf&uuml;gen oder &auml;ndern.',
 
             // [MODIFIABLE]
-            8 => 'Wenn ein bestimmter Fall, der von der Administration oder den Mitgliedern des Supportteams geprüft wurde, über das Spiel hinausgeht, ist die Hauptform des anwendbaren Rechts das Rechtssystem, das für das Land der Herkunft des Spielbesitzers geeignet ist - [SPIELBESITZER LAND ODER GERICHTSSTAND HIER]. ',
+            8 => 'Wenn ein bestimmter Fall, der von der Administration oder den Mitgliedern des Supportteams gepr&uuml;ft wurde, &uuml;ber das Spiel hinausgeht, ist die Hauptform des anwendbaren Rechts das Rechtssystem, das f&uuml;r das Land der Herkunft des Spielbesitzers geeignet ist - [SPIELBESITZER LAND ODER GERICHTssTAND HIER]. ',
 
-            9 => 'Die Spielebesitzer und -verwaltung behalten sich das Recht vor, den Zugriff auf den Spielserver für ausgewählte Personen, Personengruppen oder Organisationen teilweise oder vollständig einzuschränken.',
+            9 => 'Die Spielebesitzer und -verwaltung behalten sich das Recht vor, den Zugriff auf den Spielserver f&uuml;r ausgew&auml;hlte Personen, Personengruppen oder Organisationen teilweise oder vollst&auml;ndig einzuschr&auml;nken.',
 
-            10 => 'Die Spielebesitzer und die Administration übernehmen keine Verantwortung für Fehlfunktionen oder Spieleserver Ausfälle und Spieler haben keinen Anspruch auf Entschädigung für diese Probleme.',
+            10 => 'Die Spielebesitzer und die Administration &uuml;bernehmen keine Verantwortung f&uuml;r Fehlfunktionen oder Spieleserver Ausf&auml;lle und Spieler haben keinen Anspruch auf Entsch&auml;digung f&uuml;r diese Probleme.',
 
             11 => [
-                'title' => 'Persönliche Daten',
+                'title' => 'Pers&ouml;nliche Daten',
                 'elements' => [
-                    1 => 'Die Spielebesitzer behalten sich das Recht vor, persönliche Daten (wie IP-Adressen oder E-Mail-Adressen) auch nach dem Löschen des Kontos des Spielers zu speichern.',
+                    1 => 'Die Spielebesitzer behalten sich das Recht vor, pers&ouml;nliche Daten (wie IP-Adressen oder E-Mail-Adressen) auch nach dem L&ouml;schen des Kontos des Spielers zu speichern.',
 
-                    2 => 'Der Spieler hat das Recht, die Löschung seiner persönlichen Daten jederzeit zu überprüfen, zu ändern oder zu verlangen (dies kann es jedoch unmöglich machen, das Spiel fortzusetzen, da einige der Details möglicherweise erforderlich sind, um das Spiel zuzulassen selbst spielen).',
+                    2 => 'Der Spieler hat das Recht, die L&ouml;schung seiner pers&ouml;nlichen Daten jederzeit zu &uuml;berpr&uuml;fen, zu &auml;ndern oder zu verlangen (dies kann es jedoch unm&ouml;glich machen, das Spiel fortzusetzen, da einige der Details m&ouml;glicherweise erforderlich sind, um das Spiel zuzulassen selbst spielen).',
 
                     // [MODIFIABLE]
-                    3 => 'Weitere Einzelheiten zum Thema Speicherung, Speicherung und Verarbeitung personenbezogener Daten werden hier angegeben, wenn das für das Herkunftsland des Spielbesitzers geltende Recht dies vorschreibt. [Z.B. GDPR-ERFORDERLICHE DETAILS] '
+                    3 => 'Weitere Einzelheiten zum Thema Speicherung, Speicherung und Verarbeitung personenbezogener Daten werden hier angegeben, wenn das f&uuml;r das Herkunftsland des Spielbesitzers geltende Recht dies vorschreibt. [Z.B. GDPR-ERFORDERLICHE DETAILS] '
                 ]]
             ],
         ]]
@@ -76,44 +76,44 @@ $ _Lang ['RulesDefinitions'] = [
 
                     2 => 'Ein Spieler, dessen Konto gesperrt wurde, kann kein neues Konto erstellen, um das Spiel fortzusetzen.',
 
-                    3 => 'Auf jedem Konto kann nur eine Person dieses Konto zum Spielen des Spiels verwenden, es sei denn, einer der Sonderfälle (siehe unten) tritt auf oder die Verwaltung hat eine Sondergenehmigung erteilt.',
+                    3 => 'Auf jedem Konto kann nur eine Person dieses Konto zum Spielen des Spiels verwenden, es sei denn, einer der Sonderf&auml;lle (siehe unten) tritt auf oder die Verwaltung hat eine Sondergenehmigung erteilt.',
 
                     4 => 'Das Teilen eines Kontos zwischen zwei oder mehr Personen ist strengstens untersagt.',
 
                     5 => [
-                        'maintext' => 'Ein Spieler kann eine andere Person autorisieren, sich in ihr Konto einzuloggen, um den Urlaubsmodus zu aktivieren, wenn der ursprüngliche Kontoinhaber dies nicht alleine kann:',
+                        'maintext' => 'Ein Spieler kann eine andere Person autorisieren, sich in ihr Konto einzuloggen, um den Urlaubsmodus zu aktivieren, wenn der urspr&uuml;ngliche Kontoinhaber dies nicht alleine kann:',
 
                         'ul' => [
-                            "Die Tatsache einer solchen Situation sollte der Verwaltung in den nächsten 24 Stunden seit dem Anmelden gemeldet werden."
+                            'Die Tatsache einer solchen Situation sollte der Verwaltung in den n&auml;chsten 24 Stunden seit dem Anmelden gemeldet werden.'
 
-                            'Die autorisierte Person hat eine begrenzte Anzahl zulässiger Aktionen: Aktivieren des Urlaubsmodus und (falls dies auch für die Aktivierung des Urlaubsmodus erforderlich ist) Abbrechen aller laufenden Aktionen auf dem Konto (z. B. Gebäude \' Konstruktionen, Technologieforschung) oder das Rückholen fliegender Flotten. ',
+                            'Die autorisierte Person hat eine begrenzte Anzahl zul&auml;ssiger Aktionen: Aktivieren des Urlaubsmodus und (falls dies auch f&uuml;r die Aktivierung des Urlaubsmodus erforderlich ist) Abbrechen aller laufenden Aktionen auf dem Konto (z. B. Geb&auml;ude \' Konstruktionen, Technologieforschung) oder das R&uuml;ckholen fliegender Flotten. ',
 
-                            "Andere Aktionen, wie das Starten anderer Konstruktionen oder das Senden von Flotten, sind strengstens verboten.",
+                            'Andere Aktionen, wie das Starten anderer Konstruktionen oder das Senden von Flotten, sind strengstens verboten.',
 
-                            "In Fällen, in denen die Aktivierung des Urlaubsmodus nicht möglich ist (z. B. wenn eine andere Flotte in Richtung des Planeten des Eigentümers fliegt), sollte sich die autorisierte Person vom Konto abmelden und versuchen, den Urlaubsmodus später zu aktivieren."
+                            'In F&auml;llen, in denen die Aktivierung des Urlaubsmodus nicht m&ouml;glich ist (z. B. wenn eine andere Flotte in Richtung des Planeten des Eigent&uuml;mers fliegt), sollte sich die autorisierte Person vom Konto abmelden und versuchen, den Urlaubsmodus sp&auml;ter zu aktivieren.'
                         ]]
                     ],
 
-                    6 => 'Ein einzelner Computer oder ein anderes internetfähiges Gerät kann verwendet werden, um jeweils nur auf ein Spielkonto zuzugreifen. Wenn das Gerät von mehreren Personen gemeinsam genutzt wird, muss jede Person warten, bis sie an der Reihe ist.',
+                    6 => 'Ein einzelner Computer oder ein anderes internetf&auml;higes Ger&auml;t kann verwendet werden, um jeweils nur auf ein Spielkonto zuzugreifen. Wenn das Ger&auml;t von mehreren Personen gemeinsam genutzt wird, muss jede Person warten, bis sie an der Reihe ist.',
 
                     7 => [
-                        'maintext' => 'Die Tatsache, dass mehrere Spieler eine Geräte- oder Netzwerkverbindung gemeinsam nutzen, muss der Verwaltung spätestens in den ersten 24 Stunden nach der Registrierung über eine spezielle Funktion im Spiel ("Shared IP-Deklaration") gemeldet werden der nächste Spieler. Es sei auch darauf hingewiesen, dass:',
+                        'maintext' => 'Die Tatsache, dass mehrere Spieler eine Ger&auml;te- oder Netzwerkverbindung gemeinsam nutzen, muss der Verwaltung sp&auml;testens in den ersten 24 Stunden nach der Registrierung &uuml;ber eine spezielle Funktion im Spiel ("Shared IP-Deklaration") gemeldet werden der n&auml;chste Spieler. Es sei auch darauf hingewiesen, dass:',
 
                         'ul' => [
-                            "keine Verbindung zwischen Konten bestehen kann, die auf dem gemeinsam genutzten Gerät / Netzwerk gespielt werden, mit Ausnahme der Zugehörigkeit zu derselben Allianz, die auf der Freundesliste eines jeden steht oder über In-Game-Messaging-Systeme kommuniziert."
+                            'keine Verbindung zwischen Konten bestehen kann, die auf dem gemeinsam genutzten Ger&auml;t / Netzwerk gespielt werden, mit Ausnahme der Zugeh&ouml;rigkeit zu derselben Allianz, die auf der Freundesliste eines jeden steht oder &uuml;ber In-Game-Messaging-Systeme kommuniziert.'
 
-                            'jeder Kontakt zwischen Flotten dieser Kontenverboten ist. Gemeinsame Angriffe sind nur in besonderen Fällen zulässig und müssen zuerst der Verwaltung gemeldet werden.',
+                            'jeder Kontakt zwischen Flotten dieser Kontenverboten ist. Gemeinsame Angriffe sind nur in besonderen F&auml;llen zul&auml;ssig und m&uuml;ssen zuerst der Verwaltung gemeldet werden.',
 
-                            'Eine Ausnahme von den oben genannten Freigaberegeln besteht darin, dass das freigegebene Gerät oder die freigegebene Netzwerkverbindung gelegentlich verwendet wird (z. B. wenn du einen Freund besuchst und dessen Netzwerkverbindung verwendest). In diesen Fällen ist der Kontakt der Flotten nur zu dem Zeitpunkt verboten, zu dem die Freigabe erfolgt, und muss nicht gemeldet werden. Bedenke, dass diese Situationen weiterhin von der Verwaltung analysiert werden können und die Spieler alle diesbezüglichen Anfragen der Verwaltung beantworten müssen.'
+                            'Eine Ausnahme von den oben genannten Freigaberegeln besteht darin, dass das freigegebene Ger&auml;t oder die freigegebene Netzwerkverbindung gelegentlich verwendet wird (z. B. wenn du einen Freund besuchst und dessen Netzwerkverbindung verwendest). In diesen F&auml;llen ist der Kontakt der Flotten nur zu dem Zeitpunkt verboten, zu dem die Freigabe erfolgt, und muss nicht gemeldet werden. Bedenke, dass diese Situationen weiterhin von der Verwaltung analysiert werden k&ouml;nnen und die Spieler alle diesbez&uuml;glichen Anfragen der Verwaltung beantworten m&uuml;ssen.'
                         ]]
                     ]]
                 ]]
             ],
 
             2 => [
-                'title' => 'Accounttäusche',
+                'title' => 'Accountt&auml;usche',
                 'elements' => [
-                    1 => 'Das Austauschen von Konten ist zulässig, sollte jedoch der Verwaltung gemeldet werden. In diesem Fall kann die Verwaltung die Passwörter von Konten automatisch austauschen. Im Falle eines nicht gemeldeten Austauschs kooperiert die Administration nicht bei Aktionen, wenn ein Spieler einen anderen betrügt.',
+                    1 => 'Das Austauschen von Konten ist zul&auml;ssig, sollte jedoch der Verwaltung gemeldet werden. In diesem Fall kann die Verwaltung die Passw&ouml;rter von Konten automatisch austauschen. Im Falle eines nicht gemeldeten Austauschs kooperiert die Administration nicht bei Aktionen, wenn ein Spieler einen anderen betr&uuml;gt.',
                 ]]
             ]]
         ]]
@@ -127,99 +127,98 @@ $ _Lang ['RulesDefinitions'] = [
                 'elements' => [
                     1 => 'Der Handel im Spiel muss nicht gemeldet werden.',
 
-                    2 => 'Eine minimale Handelsquote für jede Ressource beträgt 1 zu 1. Handelsressourcen mit nicht rationalen Verhältnissen (stark unterbewertet oder aufgeblasen) können als Push-Fall behandelt werden, wie in Regel <b> 3.2 beschrieben. </b>.',
+                    2 => 'Eine minimale Handelsquote f&uuml;r jede Ressource betr&auml;gt 1 zu 1. Handelsressourcen mit nicht rationalen Verh&auml;ltnissen (stark unterbewertet oder aufgeblasen) k&ouml;nnen als Push-Fall behandelt werden, wie in Regel <b> 3.2 beschrieben. </b>.',
 
-                    3 => 'Jeder Trade muss innerhalb von 24 Stunden seit dem Versand der Transportflotte durch den ersten Spieler abgeschlossen sein. Jeder Fall von Ressourcen, die vom zweiten Spieler nicht zurückgeschickt werden, wird als Push-Fall oder Raub behandelt.',
+                    3 => 'Jeder Trade muss innerhalb von 24 Stunden seit dem Versand der Transportflotte durch den ersten Spieler abgeschlossen sein. Jeder Fall von Ressourcen, die vom zweiten Spieler nicht zur&uuml;ckgeschickt werden, wird als Push-Fall oder Raub behandelt.',
 
-                    4 => 'Es gibt keine Beschränkung, wie viele Trades an einem Tag ausgeführt werden können.',
+                    4 => 'Es gibt keine Beschr&auml;nkung, wie viele Trades an einem Tag ausgef&uuml;hrt werden k&ouml;nnen.',
 
-                    5 => 'Ressourcendarlehen sollten der Verwaltung gemeldet werden. Andernfalls können sie wie in Regel <b> 3.2. </b> ', als Push-Fall behandelt werden.',
+                    5 => 'Ressourcendarlehen sollten der Verwaltung gemeldet werden. Andernfalls k&ouml;nnen sie wie in Regel <b> 3.2. </b> ', als Push-Fall behandelt werden.',
 
                     6 => 'Die Laufzeit des Ressourcendarlehens sollte maximal 14 Tage betragen.'
                 ]]
             ],
-#####################################################
             2 => [
                 'title' => 'Push',
                 'elements' => [
-                    1 => 'Der Push wird als Zeichen materieller Unterstützung angesehen, die von einem schwächeren Spieler zu einem viel mächtigeren Spieler kommt.',
+                    1 => 'Als Push werden Anzeichen materieller Unterst&uuml;tzung angesehen, die von einem schw&auml;cheren Spieler zu einem viel m&auml;chtigeren Spieler kommt.',
 
                     2 => [
-                        'maintext' => 'Die Manifestationen des Push sind:',
+                        'maintext' => 'Die Kriterien eines Pushes sind:',
                         'ul' => [
-                            "Leihfreie Ressourcentransporte zu Planeten oder Monden des mächtigeren Spielers."
+                            'Leihfreie Ressourcentransporte zu Planeten oder Monden des m&auml;chtigeren Spielers.',
 
-                            "Absichtliche Flottenzerstörung des schwächeren Spielers durch Angriff auf die Planeten oder den Mond eines viel mächtigeren Spielers, so dass der mächtigere Spieler die Trümmer leicht sammeln kann."
+                            'Absichtliche Flottenzerst&ouml;rung des schw&auml;cheren Spielers durch Angriff auf die Planeten oder den Mond eines viel m&auml;chtigeren Spielers, so dass der m&auml;chtigere Spieler die Tr&uuml;mmer leicht sammeln kann.',
 
-                            "Absichtliche Ressourcen, die ohne oder mit nur geringer Verteidigung gehortet werden, so dass der mächtigere Spieler sie ohne großen Widerstand leicht einsammeln kann."
+                            'Ressourcen, die ohne oder mit nur geringer Verteidigung gehortet werden, so dass der m&auml;chtigere Spieler sie ohne grossen Widerstand leicht einsammeln kann.',
 
-                            "Keine Einstellung einer anderen Person für bestimmte Aktionen (z. B. Mondherstellung, Vermietung von Recyclern, absichtliche Verschrottung von Schiffen) melden, wenn der Bericht nach den Regeln dieser Aktion erforderlich ist."
+                            'Keine Einstellung einer anderen Person f&uuml;r bestimmte Aktionen (z. B. Mondherstellung, Vermietung von Recyclern, absichtliche Verschrottung von Schiffen) melden, wenn der Bericht nach den Regeln dieser Aktion erforderlich ist.',
 
-                            'Verstoß gegen eine der Regeln unter <b> 3.1. Punkt </ b> dieses Dokuments mit den Nutzungsbedingungen. ',
+                            'Verstoss gegen eine der Regeln unter <b> 3.1. Punkt </b> dieses Dokuments mit den Nutzungsbedingungen. ',
 
-                            "Alle anderen Arten der absichtlichen materiellen Unterstützung, wie von der Verwaltung festgelegt."
+                            'Alle anderen Arten der absichtlichen materiellen Unterst&uuml;tzung, wie von der Verwaltung festgelegt.'
                         ]]
                     ],
 
                     3 => [
-                        'maintext' => 'Zusätzliche Hinweise:',
+                        'maintext' => 'Zus&auml;tzliche Hinweise:',
                         'ul' => [
-                            'Es ist verboten, unerwünschte Ressourcen eines schwächeren Spielers zu halten und zu verwenden. Solche Ressourcen sollten sofort zurückgeschickt werden, und die Tatsache eines solchen Vorfalls sollte der Verwaltung gemeldet werden. “
+                            'Es ist verboten, Ressourcen eines schw&auml;cheren Spielers zu halten und zu verwenden. Solche Ressourcen sollten sofort zur&uuml;ckgeschickt werden, und der Vorfalls sollte der Verwaltung gemeldet werden. “,
 
-                            "Schwächere Spieler zu erpressen ist strengstens verboten und wird als Push-Instanz bestraft (der erpresste Spieler wird jedoch nicht bestraft).",
+                            'Schw&auml;chere Spieler zu erpressen ist strengstens verboten und wird als Push-Vorfall bestraft (der erpresste Spieler wird jedoch nicht bestraft).',
 
-                            "Wenn die Administration eine Push-Instanz erkennt, können sowohl die mächtigeren als auch die schwächeren Spieler bestraft werden (je nach Fall)."
+                            'Wenn die Administration einen Push-Vorfall erkennt, k&ouml;nnen sowohl die m&auml;chtigeren als auch die schw&auml;cheren Spieler bestraft werden (je nach Fall).'
                         ]]
                     ],
 
-                    4 => 'In Allianzen ist eine materielle Unterstützung für den mächtigeren Spieler in Form von Darlehen zulässig, solche Fälle sollten jedoch der Verwaltung gemeldet werden.'
+                    4 => 'In Allianzen ist eine materielle Unterst&uuml;tzung f&uuml;r den m&auml;chtigeren Spieler in Form von Darlehen zul&auml;ssig, solche F&auml;lle sollten jedoch der Verwaltung gemeldet werden.'
                 ]]
             ],
 
             3 => [
-                'title' => 'Mond machen',
+                'title' => 'Mondgenerierung',
                 'elements' => [
                     1 => [
-                        'maintext' => 'Moon Making, eine Situation, in der ein Spieler absichtlich seine Flotte sendet, um sie auf einer Umlaufbahn eines anderen Spielers zu zerstören, damit die Trümmer einen neuen Mond erzeugen, ist unter bestimmten Bedingungen zulässig:',
+                        'maintext' => 'Mondgenerierung, eine Situation, in der ein Spieler absichtlich seine Flotte sendet, um sie auf einer Umlaufbahn eines anderen Spielers zu zerst&ouml;ren, damit die Tr&uuml;mmer einen neuen Mond erzeugen, ist unter bestimmten Bedingungen zul&auml;ssig:',
                         'ul' => [
-                            "Alle Ressourcen, die der angreifende Spieler (derjenige, der seine Flotte zerstört hat) verloren hat, sollte vollständig von dem Spieler bezahlt werden, der um Hilfe bittet (derjenige, dessen Planet angegriffen wurde).",
+                            'Alle Ressourcen, die der angreifende Spieler (derjenige, dessen Flotte zerst&ouml;rt wurde) verloren hat, sollte vollst&auml;ndig von dem Spieler bezahlt werden, der um Hilfe bittet (derjenige, dessen Planet angegriffen wurde).',
 
-                            'Die Verluste auf beiden Seiten des Angriffs sollten so gering wie möglich sein. In bestimmten Fällen kann die Verschwendung zu vieler Ressourcen als Push angesehen werden. '
+                            'Die Verluste auf beiden Seiten des Angriffs sollten so gering wie m&ouml;glich sein. In bestimmten F&auml;llen kann die Verschwendung zu vieler Ressourcen als Push angesehen werden. '
                         ]]
                     ],
 
                     2 => 'Es ist nicht erforderlich, Mondversuche zu melden.',
 
-                    3 => 'Mondherstellung wird als Einstellung einer anderen Person für Hilfe angesehen.'
+                    3 => 'Mondherstellung wird als Einstellung einer anderen Person f&uuml;r Hilfe angesehen.'
                 ]]
             ],
 
             4 => [
-                'title' => 'Vorsätzliche Verschrottung von Schiffen',
+                'title' => 'Vors&auml;tzliche Verschrottung von Schiffen',
                 'elements' => [
                     1 => [
-                        'maintext' => 'Vorsätzliches Verschrotten von Schiffen ist unter bestimmten Bedingungen zulässig:',
+                        'maintext' => 'Vors&auml;tzliches Verschrotten von Schiffen ist unter bestimmten Bedingungen zul&auml;ssig:',
                         'ul' => [
-                            'Die Verschrottung <b> muss </ b> der Verwaltung gemeldet werden und kann nicht vor ihrer offiziellen Antwort mit Genehmigung ausgeführt werden.',
+                            'Die Verschrottung <b> muss </b> der Verwaltung gemeldet werden und kann nicht vor ihrer offiziellen Antwort mit Genehmigung ausgef&uuml;hrt werden.',
 
-                            "Die Spieler, die im Begriff sind, an der Verschrottung teilzunehmen, sollten einen guten Grund für die Aktion liefern und alle ihre Teilnahme bestätigen."
+                            'Die Spieler, die im Begriff sind, an der Verschrottung teilzunehmen, sollten einen guten Grund f&uuml;r die Aktion haben und ihre Teilnahme best&auml;tigen.',
 
-                            'Die Trümmer, die nach dem Verschrotten entstehen, sollten entsprechend den Verlusten in diesem Prozess zu gleichen Teilen zwischen den Spielern aufgeteilt werden. Es ist zulässig, alle unerwünschten Ressourcen mit einem angemessenen Austauschverhältnis gegen eine andere auszutauschen (z. B. Metall zu Kristall). “
+                            'Die Tr&uuml;mmer, die nach dem Verschrotten entstehen, sollten entsprechend den Verlusten in diesem Prozess zu gleichen Teilen zwischen den Spielern aufgeteilt werden. Es ist zul&auml;ssig, alle unerw&uuml;nschten Ressourcen mit einem angemessenen Austauschverh&auml;ltnis gegen eine andere auszutauschen (z. B. Metall zu Kristall). “
                         ]]
                     ],
 
-                    2 => 'Vorsätzliche Verschrottung von Schiffen gilt als Einstellung einer anderen Person zur Hilfe.'
+                    2 => 'Vors&auml;tzliche Verschrottung von Schiffen gilt als Einstellung einer anderen Person.'
                 ]]
             ],
 
             5 => [
                 'title' => 'Recyclerverleih',
                 'elements' => [
-                    1 => 'Die Vermietung von Recyclern (zum Zwecke der Sammlung von Fremdabfällen) ist zulässig, sollte jedoch der Verwaltung oder dem Support-Team gemeldet werden.',
+                    1 => 'Die Vermietung von Recyclern (zum Zwecke der Sammlung von Fremdabf&auml;llen) ist zul&auml;ssig, sollte jedoch der Verwaltung oder dem Support-Team gemeldet werden.',
 
-                    2 => 'Die Aufteilung der Ressourcen ist durch keine Kennzahlen eingeschränkt, sollte jedoch nicht gegen die Push-Regeln verstoßen.',
+                    2 => 'Die Aufteilung der Ressourcen ist durch keine Kennzahlen eingeschr&auml;nkt, sollte jedoch nicht gegen die Push-Regeln verstossen.',
 
-                    3 => 'Gesammelte Ressourcen sollten innerhalb von 24 Stunden nach ihrer Ankunft am Ursprungspunkt des Recyclers an den Hilfeanforderer zurückgesendet werden.',
+                    3 => 'Gesammelte Ressourcen sollten innerhalb von 24 Stunden nach ihrer Ankunft am Ursprungspunkt des Recyclers an den Hilfeanforderer zur&uuml;ckgesendet werden.',
 
                     4 => 'Bei der Vermietung von Recyclern wird eine andere Person um Hilfe gebeten.'
                 ]]
@@ -229,33 +228,33 @@ $ _Lang ['RulesDefinitions'] = [
                 'title' => 'Bash',
                 'elements' => [
                     // [MODIFIABLE]
-                    1 => 'Bash ist mehr als 5 Angriffe auf <b> einen Planeten oder Mond </ b> in 24 Stunden (gezählt von 00:00 bis 23:59 eines bestimmten Tages, Serverzeit) oder mehr als 15 Angriffe auf <b> einen Spieler </ b> (alle Planeten und Monde zusammengefasst) innerhalb von 24 Stunden (wiederum von 00:00 bis 23:59 Uhr eines bestimmten Tages, Serverzeit gezählt). ' ,
+                    1 => 'Als Bash gelten mehr als 5 Angriffe auf <b> einen Planeten oder Mond </b> innerhalb von 24 Stunden (gez&auml;hlt von 00:00 bis 23:59 eines bestimmten Tages, Serverzeit) oder mehr als 15 Angriffe auf <b> einen Spieler </b> (alle Planeten und Monde zusammengefasst) innerhalb von 24 Stunden (wiederum von 00:00 bis 23:59 Uhr eines bestimmten Tages, Serverzeit gez&auml;hlt). ' ,
 
-                    2 => 'Flotten mit einer "Zerstören" -Mission werden als reguläre Angriffe behandelt.',
+                    2 => 'Flotten mit einer "Zerst&ouml;ren" -Mission werden als regul&auml;re Angriffe behandelt.',
 
-                    3 => 'Jeder Spieler, der an einem United-Angriff teilnimmt, wird bei der Analyse von Verstößen gegen Bash-Regeln separat behandelt (es besteht keine kollektive Verantwortung).',
+                    3 => 'Jeder Spieler, der an einem United-Angriff teilnimmt, wird bei der Analyse von Verst&ouml;ssen gegen Bash-Regeln separat behandelt (es besteht keine kollektive Verantwortung).',
 
                     4 => [
-                        'maintext' => 'Die folgenden Fälle zählen nicht für Verstöße gegen Bash-Regeln:',
+                        'maintext' => 'Die folgenden F&auml;lle z&auml;hlen nicht f&uuml;r Verst&ouml;sse gegen Bash-Regeln:',
                         'ul' => [
-                            "Interplanetare Raketenangriffe",
+                            'Interplanetare Raketenangriffe',
 
                             'Abgefangene (abgeschossene) Spionagesonden',
 
-                            "Angriffe, die entweder mit einem Unentschieden oder dem Sieg des Verteidigers enden <b> und </ b>, wenn es keine Verluste auf der Seite der Verteidiger gibt (keine Verluste der Flotte, der Verteidigungssysteme oder der Ressourcen)."
+                            'Angriffe, die entweder mit einem Unentschieden oder dem Sieg des Verteidigers enden <b> und </b>, wenn es keine Verluste auf der Seite der Verteidiger gibt (keine Verluste der Flotte, der Verteidigungssysteme oder der Ressourcen).'
 
-                            'Angriffe, die Teil eines Krieges zwischen den Allianzen sind. Die Bash-Regeln werden 12 Stunden nach der offiziellen Kriegserklärung aufgehoben (dh der Verwaltung oder dem Support-Team gemeldet). Die Administration und / oder das Support-Team können die Erklärung ablehnen. In diesem Fall gelten die Bash-Regeln weiterhin. ',
+                            'Angriffe, die Teil eines Krieges zwischen den Allianzen sind. Die Bash-Regeln werden 12 Stunden nach der offiziellen Kriegserkl&auml;rung aufgehoben. Die Administration und / oder das Support-Team k&ouml;nnen die Erkl&auml;rung ablehnen. In diesem Fall gelten die Bash-Regeln weiterhin. ',
 
-                            'Zusätzlich zur vorherigen Regel - wenn eine der Seiten des Krieges viel schwächer ist als die andere (von der Verwaltung festgelegt), muss die Erklärung in den ersten 12 Stunden von der schwächeren Seite offiziell bestätigt werden, um die Bash-Regeln aufzuheben . ',
+                            'Zus&auml;tzlich zur vorherigen Regel - wenn eine der Seiten des Krieges viel schw&auml;cher ist als die andere (von der Verwaltung festgelegt), muss die Erkl&auml;rung in den ersten 12 Stunden von der schw&auml;cheren Seite offiziell best&auml;tigt werden, um die Bash-Regeln aufzuheben .',
 
-                            "Angriffe auf inaktive Spieler, bei denen die Inaktivitätsdauer mindestens 7 Tage beträgt (wie durch das entsprechende Etikett in der Galaxy View festgelegt)."
+                            'Angriffe auf inaktive Spieler, bei denen die Inaktivit&auml;tsdauer mindestens 7 Tage betr&auml;gt (durch das entsprechende Icon in der Galaxieansicht festgelegt).'
                         ]]
                     ],
 
                     5 => [
-                        'maintext' => 'Zusätzliche Hinweise:',
+                        'maintext' => 'Zus&auml;tzliche Hinweise:',
                         'ul' => [
-                            'Im Falle einer nicht gemeldeten Einstellung einer anderen Person hat die geschädigte Person (der Verteidiger) das Recht, den Vorfall als Verstoß gegen das Gesetz zu melden, wenn ein Missbrauch auftritt (z. B. eine fremde Anzahl von Angriffen trotz der inoffiziell vereinbarten Anzahl) Bash-Regeln. '
+                            'Im Falle einer nicht gemeldeten Einstellung einer anderen Person hat die gesch&auml;digte Person (der Verteidiger) das Recht, den Vorfall als Verstoss gegen das Gesetz zu melden, wenn ein Missbrauch auftritt (z. B. eine hohe Anzahl von Angriffen trotz der inoffiziell vereinbarten Anzahl).'
                         ]]
                     ]]
                 ]]
@@ -264,97 +263,97 @@ $ _Lang ['RulesDefinitions'] = [
             7 => [
                 'title' => 'Bug using',
                 'elements' => [
-                    1 => 'Die Verwendung von Fehlern wird als ein Fall der absichtlichen Verwendung oder des bewussten Zurückhaltens von Informationen über Fehler, Lücken oder Sicherheitslücken in der Engine des Spiels angesehen, entweder zum Nutzen der eigenen oder anderer Spieler. Dies beinhaltet auch die Verwendung der Unvollkommenheiten der Game Engine, um das Spiel als Ganzes zu destabilisieren oder zu verlangsamen oder den Zugang anderer Spieler zum Spiel zu behindern. ',
+                    1 => 'Die Verwendung von Bugs wird als ein Fall der absichtlichen Verwendung oder des bewussten Zur&uuml;ckhaltens von Informationen &uuml;ber Fehler, L&uuml;cken oder Sicherheitsl&uuml;cken in der Engine des Spiels angesehen, egal ob zum eigenen Nutzen oder dem anderer Spieler. Dies beinhaltet auch die Verwendung von Fehlern der Game Engine, um das Spiel als Ganzes zu destabilisieren oder zu verlangsamen oder den Zugang anderer Spieler zum Spiel zu behindern.',
 
-                    2 => 'Die unbeabsichtigte Verwendung von Fehlern ist standardmäßig nicht strafbar. Der gefundene Fehler muss jedoch unverzüglich der Verwaltung gemeldet werden (ohne die Informationen über den Fehler anderen Personen mitzuteilen).',
+                    2 => 'Die unbeabsichtigte Verwendung von Fehlern ist grunds&auml;tzlich nicht strafbar. Der gefundene Fehler muss jedoch unverz&uuml;glich der Verwaltung gemeldet werden (ohne die Informationen &uuml;ber den Fehler anderen Personen mitzuteilen).',
 
-                    3 => 'Jeder Spieler, der entweder für die Verwendung von Fehlern bestraft wurde oder unwissentlich einen Fehler verwendet hat, ist verpflichtet, der Verwaltung oder den Spieleentwicklern bei der Lokalisierung der Ursache des Problems zu helfen, sobald die genannten Teams um Unterstützung bitten. Die Verweigerung der Hilfe kann zum Sperren des Kontos, zum Löschen eines irreversiblen Kontos oder sogar zur vollständigen Zugriffssperre für alle Spieleserver führen. ',
+                    3 => 'Jeder Spieler, der entweder f&uuml;r die Verwendung von Fehlern bestraft wurde oder unwissentlich einen Fehler verwendet hat, ist verpflichtet, der Verwaltung oder den Spieleentwicklern bei der Lokalisierung der Ursache des Problems zu helfen, sobald die genannten Teams um Unterst&uuml;tzung bitten. Die Verweigerung der Hilfe kann zum Sperren des Kontos, zum L&ouml;schen eines Kontos oder sogar zur vollst&auml;ndigen Zugriffssperre f&uuml;r alle Spieleserver f&uuml;hren.',
 
-                    4 => 'Jeder Spieler hat die Verantwortung, jeden gefundenen Fehler zu melden, unabhängig von seiner Schädlichkeit und seinen Auswirkungen auf das Spiel.'
+                    4 => 'Jeder Spieler hat die Verantwortung, jeden gefundenen Fehler zu melden, unabh&auml;ngig von seiner Sch&auml;dlichkeit und seinen Auswirkungen auf das Spiel.'
                 ]]
             ],
 
             8 => [
                 'title' => 'Urlaubsmodus',
                 'elements' => [
-                    1 => 'Der Zweck des Urlaubsmodus besteht darin, das Konto des Spielers für die Zeit seiner Abwesenheit im Spiel vor zukünftigen Angriffen anderer Spieler zu schützen. Daher ist es verboten, die Aktivierung anderer Spieler durch den Urlaubsmodus absichtlich zu blockieren, unabhängig von der Blocktechnik (z. B. durch Senden einer extrem langsamen Flotte auf den Planeten eines anderen Spielers). ',
+                    1 => 'Der Zweck des Urlaubsmodus besteht darin, das Konto des Spielers f&uuml;r die Zeit seiner Abwesenheit im Spiel vor Angriffen anderer Spieler zu sch&uuml;tzen. Daher ist es verboten, die Aktivierung des Urlaubsmodus anderer Spieler absichtlich zu blockieren, unabh&auml;ngig von der Blocktechnik (z. B. durch Senden einer extrem langsamen Flotte auf den Planeten eines anderen Spielers).',
 
-                    2 => 'Der Urlaubsmodus muss mindestens 3 Tage dauern und darf nicht länger als 30 Tage dauern (sofern die Verwaltung dies nicht zulässt). Nach Ablauf der 30 Tage wird der Urlaubsmodus vom System automatisch deaktiviert (bei Neuberechnung der Statistik). ',
+                    2 => 'Der Urlaubsmodus muss mindestens 3 Tage dauern und darf nicht l&auml;nger als 30 Tage dauern (sofern die Verwaltung dies nicht zul&auml;sst). Nach Ablauf der 30 Tage wird der Urlaubsmodus vom System automatisch deaktiviert (bei Neuberechnung der Statistik).',
 
-                    3 => 'Nach der Deaktivierung des Urlaubsmodus (unabhängig davon, ob es sich um eine manuelle oder eine automatische Aktion handelt) sperrt das System die Möglichkeit, den Urlaubsmodus für 24 Stunden erneut zu aktivieren.'
+                    3 => 'Nach der Deaktivierung des Urlaubsmodus (unabh&auml;ngig davon, ob es sich um eine manuelle oder eine automatische Aktion handelt) sperrt das System die M&ouml;glichkeit, den Urlaubsmodus f&uuml;r 24 Stunden erneut zu aktivieren.'
                 ]]
             ],
 
             9 => [
                 'title' => 'Verschiedenes',
                 'elements' => [
-                    1 => 'Die Verwendung von Spielautomatisierungen wie Bots, Auto-Clickern, Auto-Refreshern, Makros oder ähnlichen Anwendungen oder Skripten ist strengstens untersagt (es sei denn, ein bestimmtes Skript oder eine bestimmte Anwendung ist von der Administration offiziell zugelassen). ',
+                    1 => 'Die Verwendung von Spielautomatisierungen wie Bots, Auto-Clickern, Auto-Refreshern, Makros oder &auml;hnlichen Anwendungen oder Skripten ist strengstens untersagt (es sei denn, ein bestimmtes Skript oder eine bestimmte Anwendung ist von der Administration offiziell zugelassen).',
 
                     2 => 'Die Verwendung des Spiels mit anderen Anwendungen als Webbrowsern ist strengstens untersagt.',
 
-                    3 => 'Das Engine-Entwicklungsteam des Spiels unterstützt offiziell moderne Webbrowser wie Mozilla Firefox und Google Chrome, auf die auf allen führenden Plattformen (Windows, Linux, MacOS und Android) zugegriffen werden kann. In jedem Fall wird das Entwicklungsteam alle Anstrengungen unternehmen, um sowohl die neueste als auch die Langzeit-Support-Version dieser Browser zu unterstützen. ',
+                    3 => 'Das Engine-Entwicklungsteam des Spiels unterst&uuml;tzt offiziell moderne Webbrowser wie Mozilla Firefox und Google Chrome, auf die auf allen f&uuml;hrenden Plattformen (Windows, Linux, MacOS und Android) zugegriffen werden kann. In jedem Fall wird das Entwicklungsteam alle Anstrengungen unternehmen, um sowohl die neueste als auch die Langzeit-Support-Version dieser Browser zu unterst&uuml;tzen.',
 
-                    4 => 'In besonderen Fällen einer Fehlfunktion der Game Engine oder des Game Servers kann die Administration Ressourcen gewähren und / oder Flotten zurückgeben (ist jedoch nicht dazu verpflichtet), falls durch die Fehlfunktion versehentliche Verluste verursacht werden. Die Fähigkeit der Verwaltung, verlorene Ressourcen und / oder Flotten wiederherzustellen, beschränkt sich jedoch auf die Details des Unfalls, den sie sammeln können. Daher ist es wichtig, so viele Informationen wie möglich über die Umstände des aufgetretenen Problems bereitzustellen. '
+                    4 => 'In besonderen F&auml;llen einer Fehlfunktion der Game Engine oder des Game Servers kann (ist jedoch nicht dazu verpflichtet) die Administration Ressourcen gew&auml;hren und / oder Flotten zuteilen, falls durch die Fehlfunktion versehentliche Verluste verursacht werden. Die F&auml;higkeit der Verwaltung, verlorene Ressourcen und / oder Flotten wiederherzustellen, beschr&auml;nkt sich jedoch auf die Details des Unfalls, den sie sammeln k&ouml;nnen. Daher ist es wichtig, so viele Informationen wie m&ouml;glich &uuml;ber die Umst&auml;nde des aufgetretenen Problems bereitzustellen.'
                 ]]
             ]]
         ]]
     ],
 
     4 => [
-        'title' => 'Communication',
+        'title' => 'Kommunikation',
         'elements' => [
             1 => [
                 'title' => 'In-Game-Inhalt',
                 'elements' => [
                     // [MODIFIABLE]
-                    1 => 'Sofern nicht anders angegeben, ist die offizielle Sprache für die Kontaktaufnahme mit den Spielbesitzern, dem Administrations-, Entwicklungsteam und / oder dem Support-Team die englische Sprache.',
+                    1 => 'Sofern nicht anders angegeben, ist die offizielle Sprache f&uuml;r die Kontaktaufnahme mit den Spielbesitzern, dem Administrations-, Entwicklungsteam und / oder dem Support-Team die englische Sprache.',
 
                     2 => [
-                        'maintext' => 'In In-Game-Messaging-Systemen (sowohl Private Messaging als auch öffentliche und halböffentliche Chats) ist Folgendes verboten:',
+                        'maintext' => 'In In-Game-Messaging-Systemen (sowohl Private Messaging als auch &ouml;ffentliche und halb&ouml;ffentliche Chats) ist Folgendes verboten:',
                         'ul' => [
-                            "Identifizieren Sie sich als Spielbesitzer, Administratoren, Mitglieder des Entwicklungsteams und Mitglieder des Supportteams."
+                            'sich als Spielbesitzer, Administratoren, Mitglieder des Entwicklungsteams und Mitglieder des Supportteams zu identifizieren, sofern der Spieler nicht eine der Rollen innehat.'
 
-                            "Werben Sie für andere Produkte, Dienstleistungen und Artikel, die nicht in engem Zusammenhang mit dem Spiel stehen."
+                            'Werben f&uuml;r andere Produkte, Dienstleistungen und Artikel, die nicht in engem Zusammenhang mit dem Spiel stehen.'
 
                             'SPAM-Nachrichten senden.',
 
-                            "Senden Sie schädliche und böswillige Links oder Codefragmente, insbesondere um Zugriff auf die privaten Daten anderer Spieler zu erhalten (z. B. deren persönliche Daten oder Zugangsdaten)."
+                            'sch&auml;dliche und b&ouml;swillige Links oder Codefragmente, insbesondere um Zugriff auf die privaten Daten anderer Spieler zu erhalten (z. B. deren pers&ouml;nliche Daten oder Zugangsdaten), zu senden.'
 
-                            In bestimmten Fällen ist es auch verboten, andere Menschen im Allgemeinen öffentlich zu beleidigen und zu verleumden. Die Pseudozensur von Schimpfwörtern in solchen Fällen wird immer noch strafbar sein. '
+                            'andere Menschen im Allgemeinen &ouml;ffentlich zu beleidigen und zu verleumden. Auch wenn Schimpfw&ouml;rter zensiert werden, werden diese in solchen F&auml;llen wird immer noch strafbar sein.'
                         ]]
                     ],
 
                     3 => [
-                        'maintext' => 'Beim Erstellen oder Ändern von Namen im Spiel (z. B. Namen von Konten, Planeten, Monden, Allianzen) ist Folgendes verboten:',
+                        'maintext' => 'Beim Erstellen oder &auml;ndern von Namen im Spiel (z. B. Namen von Konten, Planeten, Monden, Allianzen) ist Folgendes verboten:',
                         'ul' => [
-                            "Verwenden Sie Namen, die für und von den Spielbesitzern, Administratoren, Mitgliedern des Entwicklungsteams und Mitgliedern des Supportteams (z. B. Admin, GameMaster, Game Operator, Admin Planet) reserviert sind."
+                            'Namen, die f&uuml;r und von den Spielbesitzern, Administratoren, Mitgliedern des Entwicklungsteams und Mitgliedern des Supportteams (z. B. Admin, GameMaster, Game Operator, Admin Planet) reserviert sind.',
 
-                            "Identifizieren Sie sich als Spielbesitzer, Administratoren, Mitglieder des Entwicklungsteams und Mitglieder des Supportteams."
+                            'sich als Spielbesitzer, Administratoren, Mitglieder des Entwicklungsteams und Mitglieder des Supportteams zu identifizieren.'
 
-                            "Verwenden Sie Schimpfwörter, beleidigende und verleumderische Aussagen oder allgemein unangenehme und rassistische Namen."
+                            'Verwenden von Schimpfw&ouml;rtern, beleidigenden und verleumderischen Aussagen oder allgemein unangenehme und rassistische Namen.'
                         ]]
                     ],
 
-                    4 => 'Die Spielebesitzer und -verwaltung behalten sich das Recht vor, alle von den Spielern gesendeten Nachrichten im Spiel zu durchsuchen, insbesondere in Fällen, in denen eine Untersuchung zur Feststellung von Regelverstößen durchgeführt wird.'
+                    4 => 'Die Spielebesitzer und -verwaltung behalten sich das Recht vor, alle von den Spielern gesendeten Nachrichten im Spiel zu durchsuchen, insbesondere in F&auml;llen, in denen eine Untersuchung zur Feststellung von Regelverst&ouml;ssen durchgef&uuml;hrt wird.'
                 ]]
             ],
 
             2 => [
                 'title' => 'Kontakt mit anderen Spielern und dem Support-Team',
                 'elements' => [
-                    1 => 'Es ist verboten, andere Spieler und / oder Spielbesitzer, Mitglieder der Verwaltung, des Entwicklungsteams oder des Supportteams zu erpressen, um im Spiel Gewinne zu erzielen (z. B. zusätzliche Ressourcen oder Gefälligkeiten in bestimmten Fällen).',
+                    1 => 'Es ist verboten, andere Spieler und / oder Spielbesitzer, Mitglieder der Verwaltung, des Entwicklungsteams oder des Supportteams zu erpressen, um im Spiel Gewinne zu erzielen (z. B. zus&auml;tzliche Ressourcen oder Gef&auml;lligkeiten in bestimmten F&auml;llen).',
 
                     2 => 'Bedrohungen im Spiel (z. B. jemanden mit Angriffen auf seine Planeten zu bedrohen) sind im Rahmen des gesunden Menschenverstandes nicht strafbar.',
 
-                    3 => 'Erpressungen und Erpressungen im Zusammenhang mit der Außenwelt sind strengstens verboten und können den Strafverfolgungsbehörden gemeldet werden, die für das Land der Herkunft des Spielbesitzers geeignet sind.', '
+                    3 => 'Erpressungen im Zusammenhang mit der Aussenwelt sind strengstens verboten und k&ouml;nnen den Strafverfolgungsbeh&ouml;rden gemeldet werden, die f&uuml;r das Land der Herkunft des Spielbesitzers zust&auml;ndig sind.', '
 
-                    4 => 'Betrug im Spiel, der zu Erpressungen von Ressourcen führt, ist strengstens verboten.',
+                    4 => 'Betrug im Spiel, der zu Erpressungen von Ressourcen f&uuml;hrt, ist strengstens verboten.',
 
-                    5 => 'Alle Versuche, Spielbesitzer, Mitglieder der Verwaltung, des Entwicklungsteams oder des Supportteams zu betrügen oder zu täuschen, werden entsprechend bestraft.',
+                    5 => 'Alle Versuche, Spielbesitzer, Mitglieder der Verwaltung, des Entwicklungsteams oder des Supportteams zu betr&uuml;gen oder zu t&auml;uschen, werden entsprechend bestraft.',
 
-                    6 => 'Jeder Spieler ist verpflichtet, die Nachrichten im Spiel zu lesen, die einer der offiziellen Kommunikationskanäle mit den Spielbesitzern und der Verwaltung sind. Ähnlich wie bei der Nutzungsdauer entbindet die Unkenntnis des Nachrichteninhalts die Spieler nicht von der Verantwortung, Richtlinien zu befolgen, die über Broadcast-Nachrichten weitergeleitet werden.
+                    6 => 'Jeder Spieler ist verpflichtet, die Nachrichten im Spiel zu lesen, die einer der offiziellen Kommunikationskan&auml;le mit den Spielbesitzern und der Verwaltung sind. &auml;hnlich wie bei der Nutzungsdauer entbindet die Unkenntnis des Nachrichteninhalts die Spieler nicht von der Verantwortung, Richtlinien zu befolgen, die &uuml;ber Broadcast-Nachrichten weitergeleitet werden.',
 
-                    7 => 'Jeder Bericht, jede Meinung oder jeder Vorschlag in Bezug auf das Spiel sollte über offizielle Kanäle wie das Berichtssystem oder direkt an die Mitglieder des Administrations- oder Supportteams gemeldet werden. Gelegentliche Gespräche werden möglicherweise nicht dauerhaft aufgezeichnet, daher gelten sie nicht als offizielle Kommunikationsmethode. “
+                    7 => 'Jeder Bericht, jede Meinung oder jeder Vorschlag in Bezug auf das Spiel sollte &uuml;ber offizielle Kan&auml;le wie das Berichtssystem oder direkt an die Mitglieder des Administrations- oder Supportteams gemeldet werden. Gelegentliche Gespr&auml;che werden m&ouml;glicherweise nicht dauerhaft aufgezeichnet, daher gelten sie nicht als offizielle Kommunikationsmethode. “
                 ]]
             ],
 
@@ -363,13 +362,13 @@ $ _Lang ['RulesDefinitions'] = [
                 'elements' => [
                     1 => 'SPAM oder Werbung ohne Erlaubnis der Spielebesitzer oder der Administration sind strengstens untersagt.',
 
-                    2 => 'Jede Person, die an der Spam- oder Werbekampagne teilnimmt, wird unabhängig von ihrem Beitrag bestraft.',
+                    2 => 'Jede Person, die an der Spam- oder Werbekampagne teilnimmt, wird unabh&auml;ngig von ihrem Beitrag bestraft.',
 
-                    3 => 'Alle Spielernachrichten, deren Inhalt für ihre eigenen Spiele, Webseiten, Blogs, Foren, Verweislinks usw. wirbt, gelten ebenfalls als SPAM.',
+                    3 => 'Alle Spielernachrichten, deren Inhalt f&uuml;r ihre eigenen Spiele, Webseiten, Blogs, Foren, Verweislinks usw. wirbt, gelten ebenfalls als SPAM.',
 
-                    4 => 'Das Senden mehrerer leerer Nachrichten oder Nachrichten mit zufälligen, bedeutungslosen Zeichen oder Wörtern wird ebenfalls als SPAM angesehen.',
+                    4 => 'Das Senden mehrerer leerer Nachrichten oder Nachrichten mit zuf&auml;lligen, bedeutungslosen Zeichen oder W&ouml;rtern wird ebenfalls als SPAM angesehen.',
 
-                    5 => 'Das Senden mehrerer Spionagemissionen oder anderer Flotten, um die Postfächer anderer Spieler zu füllen, wird auch als SPAM angesehen.'
+                    5 => 'Das Senden mehrerer Spionagemissionen oder anderer Flotten, um die Postf&auml;cher anderer Spieler zu f&uuml;llen, wird auch als SPAM angesehen.'
                 ]]
             ]]
         ]]
@@ -379,32 +378,32 @@ $ _Lang ['RulesDefinitions'] = [
         'title' => 'Bezahlte Funktionen und Kontoerweiterungen',
         'elements' => [
             // [MODIFIABLE]
-            1 => 'Die in diesem Punkt der Nutzungsbedingungen geschriebenen Regeln gelten nur dann, wenn die genannten bezahlten Funktionen tatsächlich im Spiel verfügbar sind. Die Spielebesitzer sind dafür verantwortlich zu bestimmen, ob die folgenden Punkte mit dem für ihr Herkunftsland geltenden Recht vereinbar sind. “
+            1 => 'Die in diesem Punkt der Nutzungsbedingungen geschriebenen Regeln gelten nur dann, wenn die genannten bezahlten Funktionen tats&auml;chlich im Spiel verf&uuml;gbar sind. Die Spielebesitzer sind daf&uuml;r verantwortlich zu bestimmen, ob die folgenden Punkte mit dem f&uuml;r ihr Herkunftsland geltenden Recht vereinbar sind. “,
 
-            2 => 'Alle vom Spieler gekauften bezahlten Funktionen werden pro Konto gewährt und können nicht zwischen Konten übertragen werden (es sei denn, die Verwaltung stimmt dem manuell zu).',
+            2 => 'Alle vom Spieler gekauften bezahlten Funktionen werden pro Konto gew&auml;hrt und k&ouml;nnen nicht zwischen Konten &uuml;bertragen werden (es sei denn, die Verwaltung stimmt dem manuell zu).',
 
-            3 => 'Bezahlte Funktionen werden nicht erstattet, wenn der Spieler aufgrund von Regelverstößen diese Funktionen aufgrund der Sperrung, Löschung oder vollständigen Zugriffsbeschränkung des Kontos verloren hat.',
+            3 => 'Bezahlte Funktionen werden nicht erstattet, wenn der Spieler aufgrund von Regelverst&ouml;ssen diese Funktionen aufgrund der Sperrung, L&ouml;schung oder vollst&auml;ndigen Zugriffsbeschr&auml;nkung des Kontos verloren hat.',
 
-            4 => 'Das manuelle Löschen eines Kontos (vom Spieler auf dessen Anfrage gestartet) gewährt den Spielern keine Rechte, Rückgaben zu verlangen. Durch das Löschen ihres Kontos wird den Spielern bewusst, dass sie unwiderruflich auf ihr Recht verzichten, auf die von ihnen erworbenen Funktionen zuzugreifen und diese zu nutzen.
+            4 => 'Das manuelle L&ouml;schen eines Kontos (vom Spieler auf dessen Anfrage gestartet) gew&auml;hrt den Spielern keine Rechte, Erstattungen zu verlangen. Durch das L&ouml;schen ihres Kontos ist den Spielern bewusst, dass sie unwiderruflich auf ihr Recht verzichten, auf die von ihnen erworbenen Funktionen zuzugreifen und diese zu nutzen.',
 
             5 => 'Alle Verbraucherbeschwerden im Zusammenhang mit den bezahlten Funktionen sollten direkt an die Verwaltung gemeldet werden, es sei denn, ein dedizierter Kontaktkanal wurde eingerichtet.',
 
-            6 => 'In allen anderen Fällen, die nicht in diesem Dokument mit den Nutzungsbedingungen enthalten sind, sollten die für das Herkunftsland der Spielebesitzer geltenden gesetzlichen Bestimmungen angewendet werden.',
+            6 => 'In allen anderen F&auml;llen, die nicht in diesem Dokument mit den Nutzungsbedingungen enthalten sind, sollten die f&uuml;r das Herkunftsland der Spielebesitzer geltenden gesetzlichen Bestimmungen angewendet werden.',
         ]]
     ],
 
     6 => [
-        'title' => 'Endnoten',
+        'title' => 'Schlussbestimmungen',
         'elements' => [
-            1 => 'Inhalte, die im Spiel veröffentlicht werden, dürfen nicht gegen Gesetze verstoßen, die für das Herkunftsland der Spielebesitzer gelten. Es sollte auch keine ethischen Regeln und Prinzipien der persönlichen Kultur brechen. ',
+            1 => 'Inhalte, die im Spiel ver&ouml;ffentlicht werden, d&uuml;rfen nicht gegen Gesetze verstossen, die f&uuml;r das Herkunftsland der Spielebesitzer gelten. Es sollte auch keine ethischen Regeln und Prinzipien der pers&ouml;nlichen Kultur brechen. ',
 
-            2 => 'Jede Strafe, die auf das Konto des Spielers angewendet wird, kann ohne Angabe des Grundes der Bestrafung durch die Spielbesitzer oder die Verwaltung verhängt werden.',
+            2 => 'Jede Strafe, die auf das Konto des Spielers angewendet wird, kann ohne Angabe des Grundes der Bestrafung durch die Spielbesitzer oder die Verwaltung verh&auml;ngt werden.',
 
-            3 => 'Die Spielbesitzer, Administrations- und Support-Teammitglieder sind die einzigen Personen, die Entscheidungen treffen dürfen, um festzustellen, ob ein Spieler gegen eine Regel dieses Nutzungsbedingungen-Dokuments verstoßen hat oder nicht.',
+            3 => 'Die Spielbesitzer, Administrations- und Support-Teammitglieder sind die einzigen Personen, die Entscheidungen treffen d&uuml;rfen, um festzustellen, ob ein Spieler gegen eine Regel dieses Nutzungsbedingungen-Dokuments verstossen hat oder nicht.',
 
-            4 => 'Die Bestrafungsentscheidung des Support-Teammitglieds kann von der Administration in Frage gestellt werden. Die Entscheidung der Administration kann von den Spielbesitzern in Frage gestellt werden. Nur eine Person, die eine Bestrafung angewendet hat, oder eine Person mit einer höheren Position in der Entscheidungshierarchie kann die Bestrafung aufheben oder erleichtern. ',
+            4 => 'Die Bestrafungsentscheidung des Support-Teammitglieds kann von der Administration in Frage gestellt werden. Die Entscheidung der Administration kann von den Spielbesitzern in Frage gestellt werden. Nur eine Person, die eine Bestrafung angewendet hat, oder eine Person mit einer h&ouml;heren Position in der Entscheidungshierarchie kann die Bestrafung aufheben oder erleichtern. ',
 
-            5 => 'Wenn ein Spieler seine Bestrafung für ungerecht hält, kann er seine Berufung über offizielle Kommunikationskanäle an die entsprechenden Personen in der Entscheidungshierarchie senden.',
+            5 => 'Wenn ein Spieler seine Bestrafung f&uuml;r ungerecht h&auml;lt, kann er seine Berufung &uuml;ber offizielle Kommunikationskan&auml;le an die entsprechenden Personen in der Entscheidungshierarchie senden.',
 
             6 => 'In jedem Fall, der nicht in diesem Dokument mit den Nutzungsbedingungen enthalten ist, wird der Fall von den Spielbesitzern oder der Verwaltung beigelegt.'
         ]]
