@@ -120,7 +120,7 @@ function getElementProduction($elementID, &$planet, &$user, $params) {
         'planetTemp' => $planet['temp_max']
     ];
 
-    $elementProduction = $productionFormula($elementParams);
+    $elementProduction = $productionFormula($elementParams, $user);
 
     $boostersIncrease = [
         'geologist' => 0,
