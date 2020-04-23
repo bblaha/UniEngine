@@ -100,7 +100,7 @@ function getElementProduction($elementID, &$planet, &$user, $params) {
         return $production;
     }
 
-    $productionFormula = _getElementProductionFormula($elementID, $user);
+    $productionFormula = _getElementProductionFormula($elementID);
 
     if (!is_callable($productionFormula)) {
         return $production;

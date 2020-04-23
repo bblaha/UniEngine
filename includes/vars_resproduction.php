@@ -1,6 +1,8 @@
 <?php
 use UniEngine\Engine\Modules\Resources;
 
+include($_EnginePath . 'modules/resources/_includes.php');
+
 if(defined('INSIDE'))
 {
     $_Vars_ResProduction = [
@@ -24,6 +26,9 @@ if(defined('INSIDE'))
             'production' => function ($params, &$user) {
                 $level = $params['level'];
                 $productionFactor = $params['productionFactor'];
+                $resourceTechs = Resources\Utils\Initializers\initResourceTechnologiesMap([
+                    'user' => $user,
+                ]);
 
                 return [
                     'crystal' => ((20 * $level * pow((1.1), $level)) * (0.1 * $productionFactor)) * ((0.3) * pow(($resourceTechs[0]), (0.7))),
@@ -37,6 +42,9 @@ if(defined('INSIDE'))
                 $level = $params['level'];
                 $productionFactor = $params['productionFactor'];
                 $planetTemp = $params['planetTemp'];
+                $resourceTechs = Resources\Utils\Initializers\initResourceTechnologiesMap([
+                    'user' => $user,
+                ]);
 
                 return [
                     'deuterium' => (((10 * $level * pow((1.1), $level)) * (-0.002 * $planetTemp + 1.28)) * (0.1 * $productionFactor)) * ((0.3) * pow(($resourceTechs[0]), (0.7))),
