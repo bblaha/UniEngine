@@ -8,13 +8,16 @@ if(defined('INSIDE'))
     $_Vars_ResProduction = [
         // Metal Mine
         1 => [
-            'production' => function ($params, &$user) {
+            'production' => function ($params, &$user = null) {
                 $level = $params['level'];
                 $productionFactor = $params['productionFactor'];
-                $resourceTechs = Resources\Utils\Initializers\initResourceTechnologiesMap([
-                            'user' => $user,
-                        ]);
-
+                if (is_null($user)) {
+                    $resourceTechs = [0];
+                } else {
+                    $resourceTechs = Resources\Utils\Initializers\initResourceTechnologiesMap([
+                        'user' => $user,
+                    ]);
+                }
                 return [
                     'metal' => ((30 * $level * pow((1.1), $level)) * (0.1 * $productionFactor)) * (1 + ((0.3) * pow(($resourceTechs[0]), (0.7)))),
                     'energy' => (-1 * ((10 * $level * pow((1.1), $level)) * (0.1 * $productionFactor)))
@@ -23,12 +26,16 @@ if(defined('INSIDE'))
         ],
         // Crystal Mine
         2 => [
-            'production' => function ($params, &$user) {
+            'production' => function ($params, &$user = null) {
                 $level = $params['level'];
                 $productionFactor = $params['productionFactor'];
-                $resourceTechs = Resources\Utils\Initializers\initResourceTechnologiesMap([
-                    'user' => $user,
-                ]);
+                if (is_null($user)) {
+                    $resourceTechs = [0];
+                } else {
+                    $resourceTechs = Resources\Utils\Initializers\initResourceTechnologiesMap([
+                        'user' => $user,
+                    ]);
+                }
 
                 return [
                     'crystal' => ((30 * $level * pow((1.1), $level)) * (0.1 * $productionFactor)) * (1 + ((0.3) * pow(($resourceTechs[0]), (0.7)))),
@@ -38,13 +45,17 @@ if(defined('INSIDE'))
         ],
         // Deuterium Extractor
         3 => [
-            'production' => function ($params, &$user) {
+            'production' => function ($params, &$user = null) {
                 $level = $params['level'];
                 $productionFactor = $params['productionFactor'];
                 $planetTemp = $params['planetTemp'];
-                $resourceTechs = Resources\Utils\Initializers\initResourceTechnologiesMap([
-                    'user' => $user,
-                ]);
+                if (is_null($user)) {
+                    $resourceTechs = [0];
+                } else {
+                    $resourceTechs = Resources\Utils\Initializers\initResourceTechnologiesMap([
+                        'user' => $user,
+                    ]);
+                }
 
                 return [
                     'deuterium' => (((10 * $level * pow((1.1), $level)) * (-0.002 * $planetTemp + 1.28)) * (0.1 * $productionFactor)) * (1 + ((0.3) * pow(($resourceTechs[0]), (0.7)))),
@@ -54,7 +65,7 @@ if(defined('INSIDE'))
         ],
         // Solar Energy Plant
         4 => [
-            'production' => function ($params) {
+            'production' => function ($params, &$user = null) {
                 $level = $params['level'];
                 $productionFactor = $params['productionFactor'];
 
@@ -65,7 +76,7 @@ if(defined('INSIDE'))
         ],
         // Fusion Energy Planet
         12 => [
-            'production' => function ($params) {
+            'production' => function ($params, &$user = null) {
                 $level = $params['level'];
                 $productionFactor = $params['productionFactor'];
 
@@ -77,7 +88,7 @@ if(defined('INSIDE'))
         ],
         // Solar Satelite
         212 => [
-            'production' => function ($params) {
+            'production' => function ($params, &$user = null) {
                 // In this case, "level" means "count"
                 $level = $params['level'];
                 $productionFactor = $params['productionFactor'];
