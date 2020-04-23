@@ -1,6 +1,7 @@
 <?php
 
 use UniEngine\Engine\Includes\Helpers\World\Elements;
+use UniEngine\Engine\Modules\Resources;
 
 //  Notes:
 //      - The algorithm does not take into account that buildings which use
