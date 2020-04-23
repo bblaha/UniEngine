@@ -58,7 +58,7 @@ if(defined('INSIDE'))
                 }
 
                 return [
-                    'deuterium' => (((10 * $level * pow((1.1), $level)) * (-0.002 * $planetTemp + 1.28)) * (0.1 * $productionFactor)) * (1 + ((0.3) * pow(($resourceTechs[0]), (0.7)))),
+                    'deuterium' => (((10 * $level * pow((1.1), $level)) * (-0.002 * $planetTemp + 1.28)) * (0.1 * $productionFactor)) * (1 + ((0.03) * pow(($resourceTechs[0]), (0.7)))),
                     'energy' => (-1 * ((20 * $level * pow((1.1), $level)) * (0.1 * $productionFactor)))
                 ];
             }
