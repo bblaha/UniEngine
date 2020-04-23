@@ -16,7 +16,7 @@ if(defined('INSIDE'))
                         ]);
 
                 return [
-                    'metal' => ((30 * $level * pow((1.1), $level)) * (0.1 * $productionFactor)) * ((0.3) * pow(($resourceTechs[0]), (0.7))),
+                    'metal' => ((30 * $level * pow((1.1), $level)) * (0.1 * $productionFactor)) * (1 + ((0.3) * pow(($resourceTechs[0]), (0.7)))),
                     'energy' => (-1 * ((10 * $level * pow((1.1), $level)) * (0.1 * $productionFactor)))
                 ];
             }
@@ -31,7 +31,7 @@ if(defined('INSIDE'))
                 ]);
 
                 return [
-                    'crystal' => ((20 * $level * pow((1.1), $level)) * (0.1 * $productionFactor)) * ((0.3) * pow(($resourceTechs[0]), (0.7))),
+                    'crystal' => ((30 * $level * pow((1.1), $level)) * (0.1 * $productionFactor)) * (1 + ((0.3) * pow(($resourceTechs[0]), (0.7)))),
                     'energy' => (-1 * ((10 * $level * pow((1.1), $level)) * (0.1 * $productionFactor)))
                 ];
             }
@@ -47,7 +47,7 @@ if(defined('INSIDE'))
                 ]);
 
                 return [
-                    'deuterium' => (((10 * $level * pow((1.1), $level)) * (-0.002 * $planetTemp + 1.28)) * (0.1 * $productionFactor)) * ((0.3) * pow(($resourceTechs[0]), (0.7))),
+                    'deuterium' => (((10 * $level * pow((1.1), $level)) * (-0.002 * $planetTemp + 1.28)) * (0.1 * $productionFactor)) * (1 + ((0.3) * pow(($resourceTechs[0]), (0.7)))),
                     'energy' => (-1 * ((20 * $level * pow((1.1), $level)) * (0.1 * $productionFactor)))
                 ];
             }
