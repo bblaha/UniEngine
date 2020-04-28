@@ -127,10 +127,10 @@ if($Slots['FlyingExpeditions'] >= $Slots['MaxExpedSlots'] AND $Fleet['Mission'] 
 }
 
 // --- Switch Off Expeditions
-// if($Fleet['Mission'] == 15)
-// {
-//    messageRed($_Lang['fl3_ExpeditionsAreOff'], $ErrorTitle);
-// }
+if($Fleet['Mission'] == 15)
+{
+    messageRed($_Lang['fl3_ExpeditionsAreOff'], $ErrorTitle);
+}
 
 // --- Check if all resources are correct (no negative numbers and enough on planet)
 foreach($Fleet['resources'] as $Key => $Data)
