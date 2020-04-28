@@ -13,7 +13,9 @@ use UniEngine\Utils\Migrations\FSHandler;
 class Migration_20200428 implements Migrations\Interfaces\Migration {
 
     public function __construct() {
-        $this->configProvider = new Migrations\PHPConfigProvider();
+        $this->fsHandler = new FSHandler([
+            "rootPath" => "./"
+        ]);
     }
 
     public function up() {
